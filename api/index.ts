@@ -101,75 +101,131 @@ const HTML = `<!DOCTYPE html>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:'Inter',sans-serif;background:#f4f7fd;color:#1e2a45;-webkit-font-smoothing:antialiased}
+    body{font-family:'Inter',sans-serif;background:#eef2fb;color:#1e2a45;-webkit-font-smoothing:antialiased}
     ::-webkit-scrollbar{width:4px}
     ::-webkit-scrollbar-thumb{background:#1d52b0;border-radius:2px}
-    .top-nav{background:#0f3172;border-bottom:1px solid rgba(255,255,255,.08)}
-    .hero-section{background:#0f3172}
+
+    /* ── NAV ── */
+    .top-nav{background:linear-gradient(135deg,#0a2560 0%,#0f3172 60%,#1a4498 100%);border-bottom:1px solid rgba(255,255,255,.1);box-shadow:0 2px 16px rgba(10,37,96,.35)}
+
+    /* ── HERO ── */
+    .hero-section{background:linear-gradient(155deg,#071d4a 0%,#0f3172 45%,#1648a8 80%,#0e3d8a 100%)}
+
+    /* ── LANG ── */
     .lang-btn{padding:5px 11px;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;transition:background .15s,color .15s;color:rgba(255,255,255,.55);border:1px solid transparent}
-    .lang-btn.active{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.2)}
-    .lang-btn:hover:not(.active){color:rgba(255,255,255,.85)}
-    .trust-item{display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(255,255,255,.75);white-space:nowrap}
-    .stat-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 10px;text-align:center}
-    .pkg-card{background:#fff;border-radius:16px;border:1px solid #e2e8f4;transition:box-shadow .2s,transform .2s;overflow:hidden;position:relative}
-    .pkg-card:hover{box-shadow:0 12px 32px rgba(15,49,114,.1);transform:translateY(-3px)}
-    .pkg-card.featured{border:2px solid #c9820a}
-    .ribbon{position:absolute;top:12px;right:-26px;background:#c9820a;color:#fff;font-size:9.5px;font-weight:700;padding:4px 30px;transform:rotate(30deg);letter-spacing:.4px;pointer-events:none}
-    .age-badge{display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-radius:6px;padding:2px 8px;font-size:10px;font-weight:600;margin-bottom:6px}
-    .review-card{background:#fff;border-radius:14px;padding:18px;border:1px solid #e8edf5}
-    .step-dot{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0}
+    .lang-btn.active{background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.25);box-shadow:0 1px 6px rgba(0,0,0,.15)}
+    .lang-btn:hover:not(.active){color:rgba(255,255,255,.88)}
+
+    /* ── TRUST / STAT ── */
+    .trust-item{display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(255,255,255,.8);white-space:nowrap}
+    .stat-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px 10px;text-align:center;backdrop-filter:blur(4px)}
+
+    /* ── PACKAGE CARDS ── */
+    .pkg-card{background:#fff;border-radius:18px;border:1px solid #dde5f5;transition:box-shadow .25s,transform .25s;overflow:hidden;position:relative;box-shadow:0 2px 12px rgba(15,49,114,.06)}
+    .pkg-card:hover{box-shadow:0 16px 40px rgba(15,49,114,.14);transform:translateY(-4px)}
+    .pkg-card.featured{border:2px solid #c9820a;box-shadow:0 4px 20px rgba(201,130,10,.18)}
+    .ribbon{position:absolute;top:12px;right:-26px;background:linear-gradient(135deg,#e8a020,#c9820a);color:#fff;font-size:9.5px;font-weight:700;padding:4px 30px;transform:rotate(30deg);letter-spacing:.4px;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+    .age-badge{display:inline-block;background:rgba(255,255,255,.2);color:#fff;border-radius:6px;padding:3px 10px;font-size:10px;font-weight:700;margin-bottom:6px;letter-spacing:.3px;border:1px solid rgba(255,255,255,.15)}
+
+    /* ── REVIEW CARDS ── */
+    .review-card{background:#fff;border-radius:16px;padding:20px;border:1px solid #dde5f5;box-shadow:0 2px 12px rgba(15,49,114,.06);transition:box-shadow .2s}
+    .review-card:hover{box-shadow:0 8px 28px rgba(15,49,114,.1)}
+
+    /* ── WHY CARDS ── */
+    .why-card{background:#fff;border-radius:16px;padding:20px 16px;border:1px solid #dde5f5;transition:box-shadow .2s,transform .2s;box-shadow:0 2px 8px rgba(15,49,114,.05)}
+    .why-card:hover{box-shadow:0 10px 28px rgba(15,49,114,.12);transform:translateY(-2px)}
+    .why-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+
+    /* ── AWARD CARDS ── */
+    .award-card{background:linear-gradient(145deg,#fff 60%,#f0f5ff);border-radius:16px;padding:22px 18px;border:1px solid #dde5f5;text-align:center;transition:box-shadow .2s,transform .2s;box-shadow:0 2px 10px rgba(15,49,114,.07)}
+    .award-card:hover{box-shadow:0 10px 30px rgba(15,49,114,.13);transform:translateY(-2px)}
+
+    /* ── STEPS ── */
+    .step-dot{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex-shrink:0;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+    .step-card{background:#fff;border-radius:16px;padding:20px;border:1px solid #dde5f5;box-shadow:0 2px 10px rgba(15,49,114,.06);display:flex;gap:16px;align-items:flex-start}
+
+    /* ── FAQ ── */
     .acc-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
     .acc-body.open{max-height:400px}
     .faq-icon{transition:transform .3s}
-    .section-eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1d52b0;margin-bottom:5px}
-    .section-h{font-size:clamp(1.3rem,3.5vw,1.85rem);font-weight:800;color:#0f3172;line-height:1.25}
-    .section-sub{font-size:.875rem;color:#64748b;margin-top:6px;line-height:1.6}
-    .btn-primary{background:#0f3172;color:#fff;font-weight:700;border-radius:10px;transition:background .2s,transform .15s;display:inline-flex;align-items:center;justify-content:center;gap:7px}
-    .btn-primary:hover{background:#1d52b0;transform:translateY(-1px)}
-    .btn-gold{background:#c9820a;color:#fff;font-weight:700;border-radius:10px;transition:background .2s,transform .15s;display:inline-flex;align-items:center;justify-content:center;gap:7px}
-    .btn-gold:hover{background:#e8a020;transform:translateY(-1px)}
-    .btn-wa{background:#25d366;color:#fff;font-weight:700;border-radius:10px;transition:background .2s;display:inline-flex;align-items:center;justify-content:center;gap:7px}
-    .btn-wa:hover{background:#20b857}
-    .btn-ghost{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);color:#fff;font-weight:600;border-radius:10px;transition:background .2s;display:inline-flex;align-items:center;justify-content:center;gap:7px}
-    .btn-ghost:hover{background:rgba(255,255,255,.18)}
-    .why-card{background:#fff;border-radius:14px;padding:18px 16px;border:1px solid #e8edf5;transition:box-shadow .2s}
-    .why-card:hover{box-shadow:0 8px 24px rgba(15,49,114,.08)}
-    .why-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
-    .award-card{background:#fff;border-radius:14px;padding:20px 18px;border:1px solid #e8edf5;text-align:center;transition:box-shadow .2s}
-    .award-card:hover{box-shadow:0 8px 24px rgba(15,49,114,.1)}
-    .comp-table th{background:#0f3172;color:#fff;padding:10px 8px;font-size:11px;font-weight:600;text-align:center}
-    .comp-table td{padding:9px 8px;font-size:12px;text-align:center;border-bottom:1px solid #f0f4fc}
-    .comp-table tr:last-child td{border-bottom:none}
-    .comp-table tr:nth-child(even) td{background:#f8faff}
-    .inc-item{display:flex;align-items:flex-start;gap:6px;font-size:12px;color:#475569;line-height:1.5;padding:2px 0}
-    .inc-icon{flex-shrink:0;margin-top:2px;font-size:10px}
-    .tabs-row{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+
+    /* ── SECTION LABELS ── */
+    .section-eyebrow{display:inline-block;font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#1d52b0;margin-bottom:7px;background:#e8efff;border-radius:20px;padding:3px 12px;border:1px solid #c7d8ff}
+    .section-h{font-size:clamp(1.25rem,4vw,1.85rem);font-weight:800;color:#0a2460;line-height:1.25}
+    .section-sub{font-size:.875rem;color:#5a6e8c;margin-top:8px;line-height:1.65}
+
+    /* ── BUTTONS ── */
+    .btn-primary{background:linear-gradient(135deg,#1648a8,#0f3172);color:#fff;font-weight:700;border-radius:12px;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:7px;box-shadow:0 4px 14px rgba(15,49,114,.3)}
+    .btn-primary:hover{background:linear-gradient(135deg,#1d52b0,#1648a8);transform:translateY(-2px);box-shadow:0 6px 20px rgba(15,49,114,.38)}
+    .btn-gold{background:linear-gradient(135deg,#e8a020,#c9820a);color:#fff;font-weight:700;border-radius:12px;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:7px;box-shadow:0 4px 14px rgba(201,130,10,.35)}
+    .btn-gold:hover{background:linear-gradient(135deg,#f0b030,#d99010);transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,130,10,.45)}
+    .btn-wa{background:linear-gradient(135deg,#2ee86e,#25d366);color:#fff;font-weight:700;border-radius:12px;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:7px;box-shadow:0 4px 14px rgba(37,211,102,.3)}
+    .btn-wa:hover{background:linear-gradient(135deg,#30f075,#22c060);transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.4)}
+    .btn-ghost{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.3);color:#fff;font-weight:600;border-radius:12px;transition:background .2s;display:inline-flex;align-items:center;justify-content:center;gap:7px;backdrop-filter:blur(4px)}
+    .btn-ghost:hover{background:rgba(255,255,255,.22)}
+
+    /* ── TABS ── */
+    .tabs-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
     .tabs-row::-webkit-scrollbar{display:none}
-    .tab-pill{padding:7px 16px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .15s;border:1.5px solid #e2e8f0;color:#64748b;background:#fff}
-    .tab-pill.on{background:#0f3172;color:#fff;border-color:#0f3172}
-    .tab-pill:hover:not(.on){border-color:#1d52b0;color:#1d52b0}
-    .note-box{background:#fff;border:1px solid #e2e8f4;border-radius:12px;padding:14px 16px}
-    .amber-box{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:14px 16px}
+    .tab-pill{padding:9px 18px;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;transition:all .18s;border:1.5px solid #c7d8ff;color:#2855a0;background:#e8efff}
+    .tab-pill.on{background:linear-gradient(135deg,#1648a8,#0f3172);color:#fff;border-color:#0f3172;box-shadow:0 3px 12px rgba(15,49,114,.28)}
+    .tab-pill:hover:not(.on){border-color:#1d52b0;background:#d4e2ff;color:#0f3172}
+
+    /* ── INFO BOXES ── */
+    .note-box{background:#fff;border:1px solid #dde5f5;border-radius:14px;padding:16px 18px;box-shadow:0 2px 8px rgba(15,49,114,.05)}
+    .amber-box{background:linear-gradient(135deg,#fffbeb,#fff8e1);border:1px solid #fcd34d;border-radius:14px;padding:16px 18px;box-shadow:0 2px 8px rgba(201,130,10,.08)}
+    .blue-info-box{background:linear-gradient(135deg,#eff6ff,#e0ecff);border:1px solid #bfdbfe;border-radius:14px;padding:16px 18px}
+
+    /* ── TABLE ── */
+    .comp-table th{background:linear-gradient(135deg,#0a2460,#0f3172);color:#fff;padding:11px 8px;font-size:11px;font-weight:700;text-align:center}
+    .comp-table td{padding:10px 8px;font-size:12px;text-align:center;border-bottom:1px solid #edf2fc}
+    .comp-table tr:last-child td{border-bottom:none}
+    .comp-table tr:nth-child(even) td{background:#f4f8ff}
+
+    /* ── INC LIST ── */
+    .inc-item{display:flex;align-items:flex-start;gap:7px;font-size:12px;color:#3d5280;line-height:1.55;padding:3px 0}
+    .inc-icon{flex-shrink:0;margin-top:2px;font-size:10px}
+
+    /* ── WHATSAPP FLOAT ── */
     .wa-float{position:fixed;bottom:24px;right:20px;z-index:998}
-    .wa-fab{width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.18);cursor:pointer;transition:transform .2s,box-shadow .2s;color:#fff;font-size:26px;border:none}
-    .wa-fab:hover{transform:scale(1.08);box-shadow:0 6px 24px rgba(0,0,0,.24)}
-    .wa-tooltip{position:absolute;bottom:64px;right:0;background:#1e2a45;color:#fff;font-size:11.5px;font-weight:600;padding:6px 12px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+    .wa-fab{width:58px;height:58px;background:linear-gradient(135deg,#2ee86e,#25d366);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,.4);cursor:pointer;transition:transform .2s,box-shadow .2s;color:#fff;font-size:27px;border:none}
+    .wa-fab:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(37,211,102,.5)}
+    .wa-tooltip{position:absolute;bottom:68px;right:0;background:#0a2460;color:#fff;font-size:11.5px;font-weight:600;padding:7px 13px;border-radius:9px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;box-shadow:0 4px 14px rgba(0,0,0,.22)}
     .wa-float:hover .wa-tooltip{opacity:1}
-    .wa-tooltip::after{content:'';position:absolute;bottom:-5px;right:20px;border:5px solid transparent;border-top-color:#1e2a45;border-bottom:none}
-    .modal-bg{position:fixed;inset:0;background:rgba(10,20,50,.55);z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .25s}
+    .wa-tooltip::after{content:'';position:absolute;bottom:-5px;right:20px;border:5px solid transparent;border-top-color:#0a2460;border-bottom:none}
+
+    /* ── MODAL / QUIZ ── */
+    .modal-bg{position:fixed;inset:0;background:rgba(5,15,40,.6);z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .25s;backdrop-filter:blur(3px)}
     .modal-bg.open{opacity:1;pointer-events:all}
-    .modal-box{background:#fff;border-radius:20px;width:100%;max-width:440px;padding:28px 24px;box-shadow:0 24px 64px rgba(0,0,0,.2);transform:translateY(16px);transition:transform .25s}
+    .modal-box{background:#fff;border-radius:22px;width:100%;max-width:440px;padding:28px 24px;box-shadow:0 28px 70px rgba(0,0,0,.22);transform:translateY(18px);transition:transform .28s}
     .modal-bg.open .modal-box{transform:translateY(0)}
-    .quiz-opt{width:100%;text-align:left;padding:11px 14px;border-radius:10px;border:1.5px solid #e2e8f0;font-size:13px;font-weight:500;color:#374151;cursor:pointer;transition:all .15s;background:#fff;margin-bottom:8px;display:flex;align-items:center;gap:10px}
-    .quiz-opt:hover{border-color:#0f3172;color:#0f3172;background:#f4f7fd}
-    .quiz-opt.selected{border-color:#0f3172;background:#eff6ff;color:#0f3172;font-weight:600}
+    .quiz-opt{width:100%;text-align:left;padding:12px 15px;border-radius:11px;border:1.5px solid #dde5f5;font-size:13px;font-weight:500;color:#374151;cursor:pointer;transition:all .15s;background:#fff;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+    .quiz-opt:hover{border-color:#1648a8;color:#0f3172;background:#eff6ff;box-shadow:0 2px 8px rgba(15,49,114,.1)}
+    .quiz-opt.selected{border-color:#0f3172;background:linear-gradient(135deg,#eff6ff,#e0ecff);color:#0f3172;font-weight:700;box-shadow:0 3px 10px rgba(15,49,114,.15)}
     .quiz-step{display:none}
     .quiz-step.active{display:block}
-    .quiz-progress{height:3px;background:#e2e8f0;border-radius:2px;margin-bottom:20px}
-    .quiz-bar{height:3px;background:#0f3172;border-radius:2px;transition:width .3s}
-    .result-pkg{border-radius:14px;padding:18px;color:#fff;margin-bottom:14px}
-    .seo-kw{color:#0f3172;font-weight:600}
-    @media(max-width:640px){.hide-sm{display:none!important}}
+    .quiz-progress{height:4px;background:#e0e9f8;border-radius:2px;margin-bottom:20px}
+    .quiz-bar{height:4px;background:linear-gradient(90deg,#1d52b0,#4a8aff);border-radius:2px;transition:width .35s}
+    .result-pkg{border-radius:16px;padding:20px;color:#fff;margin-bottom:16px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+
+    /* ── SECTION BG COLORS ── */
+    .sec-white{background:#fff}
+    .sec-blue-light{background:linear-gradient(180deg,#eef3ff 0%,#e8f0ff 100%)}
+    .sec-blue-deep{background:linear-gradient(155deg,#071d4a 0%,#0f3172 55%,#1648a8 100%)}
+    .sec-teal{background:linear-gradient(160deg,#f0fffe 0%,#e0f8f5 100%)}
+    .sec-lavender{background:linear-gradient(160deg,#f5f3ff 0%,#ede9ff 100%)}
+    .sec-warm{background:linear-gradient(160deg,#fffbf0 0%,#fff7e0 100%)}
+
+    /* ── MOBILE ENHANCEMENTS ── */
+    @media(max-width:640px){
+      .hide-sm{display:none!important}
+      .pkg-card{box-shadow:0 3px 16px rgba(15,49,114,.1)}
+      .step-card{padding:16px}
+      .section-eyebrow{font-size:9px}
+    }
+
+    /* ── GRADIENT DIVIDER ── */
+    .color-strip{height:4px;background:linear-gradient(90deg,#0f3172,#1d52b0,#4a8aff,#25d366,#c9820a)}
   </style>
 </head>
 
@@ -258,11 +314,12 @@ const HTML = `<!DOCTYPE html>
     </div>
 
   </div>
-  <svg viewBox="0 0 1440 40" preserveAspectRatio="none" style="width:100%;height:28px;display:block;margin-bottom:-2px"><path d="M0,20 C480,40 960,0 1440,24 L1440,40 L0,40Z" fill="#f4f7fd"/></svg>
+  <svg viewBox="0 0 1440 40" preserveAspectRatio="none" style="width:100%;height:28px;display:block;margin-bottom:-2px"><path d="M0,20 C480,40 960,0 1440,24 L1440,40 L0,40Z" fill="#eef3ff"/></svg>
 </header>
+<div class="color-strip"></div>
 
 <!-- ═══════ MIN HOSPITAL BRAND SECTION ═══════ -->
-<section id="brand" class="py-12 px-4 bg-mb-bg">
+<section id="brand" class="py-12 px-4 sec-blue-light">
   <div class="max-w-5xl mx-auto">
 
     <!-- Eyebrow + heading -->
@@ -362,9 +419,10 @@ const HTML = `<!DOCTYPE html>
 
   </div>
 </section>
+<div class="color-strip"></div>
 
 <!-- ═══════ WHY SECTION ═══════ -->
-<section id="why" class="py-12 px-4 bg-white">
+<section id="why" class="py-12 px-4 sec-white">
   <div class="max-w-5xl mx-auto">
     <div class="mb-8">
       <p class="section-eyebrow" t-en="WHY MIN HOSPITAL" t-ja="なぜミン病院なのか" t-zh="为什么选择民病院" t-ko="왜 민병원인가요">WHY MIN HOSPITAL</p>
@@ -423,9 +481,10 @@ const HTML = `<!DOCTYPE html>
     </div>
   </div>
 </section>
+<div class="color-strip"></div>
 
 <!-- ═══════ REVIEWS ═══════ -->
-<section class="py-12 px-4 bg-mb-bg" id="reviews">
+<section class="py-12 px-4 sec-teal" id="reviews">
   <div class="max-w-5xl mx-auto">
     <div class="mb-8">
       <p class="section-eyebrow" t-en="PATIENT VOICES" t-ja="患者様の声" t-zh="患者心声" t-ko="환자 후기">PATIENT VOICES</p>
@@ -486,9 +545,10 @@ const HTML = `<!DOCTYPE html>
     </div>
   </div>
 </section>
+<div class="color-strip"></div>
 
 <!-- ═══════ PACKAGES ═══════ -->
-<section id="packages" class="py-12 px-4 bg-white">
+<section id="packages" class="py-12 px-4 sec-lavender">
   <div class="max-w-5xl mx-auto">
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
       <div>
@@ -727,9 +787,10 @@ const HTML = `<!DOCTYPE html>
     </div>
   </div>
 </section>
+<div class="color-strip"></div>
 
 <!-- ═══════ COMPARISON TABLE ═══════ -->
-<section class="py-10 px-4 bg-mb-bg">
+<section class="py-10 px-4 sec-warm">
   <div class="max-w-5xl mx-auto">
     <div class="mb-6">
       <p class="section-eyebrow" t-en="COMPARE" t-ja="比較" t-zh="对比" t-ko="비교">COMPARE</p>
@@ -760,30 +821,31 @@ const HTML = `<!DOCTYPE html>
     </div>
   </div>
 </section>
+<div class="color-strip"></div>
 
 <!-- ═══════ HOW TO BOOK ═══════ -->
-<section class="py-12 px-4 bg-white" id="book">
+<section class="py-12 px-4 sec-white" id="book">
   <div class="max-w-3xl mx-auto">
     <div class="mb-8">
       <p class="section-eyebrow" t-en="HOW IT WORKS" t-ja="ご利用の流れ" t-zh="预约流程" t-ko="이용 방법">HOW IT WORKS</p>
       <h2 class="section-h" t-en="3 steps to your check-up" t-ja="3つのステップで検診完了" t-zh="3步完成体检预约" t-ko="3단계로 검진 완료">3 steps to your check-up</h2>
     </div>
     <div class="space-y-3">
-      <div class="bg-mb-bg rounded-xl p-5 flex gap-4 border border-gray-100">
+      <div class="step-card">
         <div class="step-dot text-white shrink-0" style="background:#0f3172">1</div>
         <div>
           <h3 class="font-semibold text-mb text-sm mb-1" t-en="Contact us via WhatsApp" t-ja="WhatsAppでお問い合わせ" t-zh="通过WhatsApp联系我们" t-ko="WhatsApp으로 문의하기">Contact us via WhatsApp</h3>
           <p class="text-sm text-gray-500 leading-relaxed" t-en="Message us in English, Japanese, or Chinese. Tell us your age and interests. We'll guide you to the right package." t-ja="英語・日本語・中国語でメッセージください。年齢とご希望をお伝えください。最適なパッケージをご案内します。" t-zh="用英语、日语或中文发消息给我们。告诉我们您的年龄和需求，我们将推荐适合的套餐。" t-ko="영어, 일본어, 중국어로 메시지 보내주세요. 나이와 관심사를 알려주시면 맞는 패키지를 안내해 드립니다.">Message us in English, Japanese, or Chinese. Tell us your age and interests. We'll guide you to the right package.</p>
         </div>
       </div>
-      <div class="bg-mb-bg rounded-xl p-5 flex gap-4 border border-gray-100">
+      <div class="step-card">
         <div class="step-dot text-white shrink-0" style="background:#c9820a">2</div>
         <div>
           <h3 class="font-semibold text-mb text-sm mb-1" t-en="Confirm your date" t-ja="日程を確定する" t-zh="确认检查日期" t-ko="날짜 확정">Confirm your date</h3>
           <p class="text-sm text-gray-500 leading-relaxed" t-en="We'll send a confirmation with prep instructions. Fast from 10 PM the night before (water is fine until 2 hrs before)." t-ja="確認書と準備案内をお送りします。前日夜10時から絶食（2時間前まで水のみOK）。" t-zh="我们会发送确认函和准备说明。从前一天晚上10点开始禁食（检查前2小时可以喝水）。" t-ko="준비 안내와 함께 확인서를 발송합니다. 전날 밤 10시부터 금식 (2시간 전까지 물은 가능).">We'll send a confirmation with prep instructions. Fast from 10 PM the night before (water is fine until 2 hrs before).</p>
         </div>
       </div>
-      <div class="bg-mb-bg rounded-xl p-5 flex gap-4 border border-gray-100">
+      <div class="step-card">
         <div class="step-dot text-white shrink-0" style="background:#065f46">3</div>
         <div>
           <h3 class="font-semibold text-mb text-sm mb-1" t-en="Visit &amp; complete your check-up" t-ja="来院・検診完了" t-zh="就诊完成体检" t-ko="방문 후 검진 완료">Visit &amp; complete your check-up</h3>
@@ -804,9 +866,10 @@ const HTML = `<!DOCTYPE html>
     </div>
   </div>
 </section>
+<div class="color-strip"></div>
 
 <!-- ═══════ FAQ ═══════ -->
-<section class="py-12 px-4 bg-mb-bg">
+<section class="py-12 px-4 sec-blue-light">
   <div class="max-w-3xl mx-auto">
     <div class="mb-8">
       <p class="section-eyebrow" t-en="FAQ" t-ja="よくある質問" t-zh="常见问题" t-ko="자주 묻는 질문">FAQ</p>
@@ -861,6 +924,7 @@ const HTML = `<!DOCTYPE html>
     </div>
   </div>
 </section>
+<div class="color-strip"></div>
 
 <!-- ═══════ CONTACT / MAP ═══════ -->
 <section class="py-12 px-4" style="background:#0f3172" id="contact">
