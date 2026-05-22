@@ -864,6 +864,519 @@ app.get('/', (c) => {
   </div>
 </section>
 
+<!-- ═══════ SURGERY TYPES ═══════ -->
+<section class="py-14 px-4 bg-white" id="surgeries">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-10 text-center">
+      <p class="section-eyebrow">SURGICAL SERVICES</p>
+      <h2 class="section-h" t-en="Surgery Types for Foreign Patients" t-ja="外国人患者向け手術種類" t-zh="外国患者手术种类" t-ko="외국인환자 수술종류">Surgery Types for Foreign Patients</h2>
+      <p class="section-sub max-w-xl mx-auto" t-en="Min Hospital offers a comprehensive range of minimally invasive and robotic surgeries. Consultation fees may apply separately." t-ja="民병院は低侵襲手術・ロボット手術を幅広く提供しています。検査費別途。" t-zh="民病院提供全面的微创手术和机器人手术。检查费另计。" t-ko="민병원은 복강경·로봇 수술을 폭넓게 제공합니다. 검사비 별도.">Min Hospital offers a comprehensive range of minimally invasive and robotic surgeries. Consultation fees may apply separately.</p>
+      <div class="inline-flex items-center gap-2 mt-3 bg-red-50 border border-red-100 rounded-lg px-4 py-2">
+        <i class="fas fa-info-circle text-red-500 text-xs"></i>
+        <span class="text-xs text-red-600 font-medium" t-en="Prices based on hospital admission (cash). Facilitation fees &amp; VAT not included." t-ja="入院費現金基準。仲介手数料・消費税別途。" t-zh="以住院现金价为准，中介费及增值税另计。" t-ko="병원 입금가 현금 기준. 유치수수료·부가세 별도.">Prices based on hospital admission (cash). Facilitation fees &amp; VAT not included.</span>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+
+      <!-- 1. Bariatric Surgery -->
+      <div class="rounded-2xl overflow-hidden border border-teal-100 shadow-sm">
+        <div class="flex items-center gap-3 px-5 py-4" style="background:linear-gradient(135deg,#0d7e6a,#0f9b82)">
+          <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 48 48" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="24" cy="20" rx="14" ry="12" fill="white" opacity="0.9"/>
+              <path d="M10 20 Q8 28 12 32 Q16 36 24 35 Q32 36 36 32 Q40 28 38 20" stroke="white" stroke-width="2" fill="none"/>
+              <path d="M20 14 Q18 10 22 8 Q26 6 28 10" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <circle cx="24" cy="20" r="4" fill="#0d7e6a"/>
+              <path d="M22 20 L24 18 L26 20 L24 22 Z" fill="white"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-white/25 text-white text-xs font-black flex items-center justify-center shrink-0">1</span>
+              <h3 class="text-white font-bold text-sm leading-tight">당뇨비만대사수술</h3>
+            </div>
+            <p class="text-teal-100 text-[11px] mt-0.5">Bariatric Surgery</p>
+            <span class="text-[10px] bg-red-500/80 text-white px-2 py-0.5 rounded-full font-semibold mt-1 inline-block">로봇 별도 문의</span>
+          </div>
+        </div>
+        <div class="bg-teal-50 px-5 py-4">
+          <ul class="space-y-1.5">
+            <li class="flex items-center gap-2 text-xs text-teal-800">
+              <span class="w-5 h-5 rounded-full bg-teal-200 text-teal-700 text-[10px] font-bold flex items-center justify-center shrink-0">a</span>
+              <span>위소매절제술 <span class="text-gray-500">(Sleeve Gastrectomy)</span></span>
+            </li>
+            <li class="flex items-center gap-2 text-xs text-teal-800">
+              <span class="w-5 h-5 rounded-full bg-teal-200 text-teal-700 text-[10px] font-bold flex items-center justify-center shrink-0">b</span>
+              <span>루와이 위 우회술 <span class="text-gray-500">(Roux-en-Y Bypass)</span></span>
+            </li>
+            <li class="flex items-center gap-2 text-xs text-teal-800">
+              <span class="w-5 h-5 rounded-full bg-teal-200 text-teal-700 text-[10px] font-bold flex items-center justify-center shrink-0">c</span>
+              <span>십이지장우회술 <span class="text-gray-500">(DJ Bypass)</span></span>
+            </li>
+            <li class="flex items-center gap-2 text-xs text-teal-800">
+              <span class="w-5 h-5 rounded-full bg-teal-200 text-teal-700 text-[10px] font-bold flex items-center justify-center shrink-0">d</span>
+              <span>근위부공장우회술 <span class="text-gray-500">(Proximal Jejunal Bypass)</span></span>
+            </li>
+            <li class="flex items-center gap-2 text-xs text-teal-800">
+              <span class="w-5 h-5 rounded-full bg-teal-200 text-teal-700 text-[10px] font-bold flex items-center justify-center shrink-0">e</span>
+              <span>위소회장우회술 <span class="text-gray-500">(Gastric-Ileojejunal Bypass)</span></span>
+            </li>
+          </ul>
+          <button onclick="openWA()" class="btn-primary w-full py-2 text-xs mt-3 rounded-lg" style="background:#0d7e6a">
+            <i class="fab fa-whatsapp"></i>
+            <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의하기">Inquire</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. Thyroidectomy -->
+      <div class="rounded-2xl overflow-hidden border border-purple-100 shadow-sm">
+        <div class="flex items-center gap-3 px-5 py-4" style="background:linear-gradient(135deg,#6d28d9,#8b5cf6)">
+          <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 48 48" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 8 L24 6 L30 8 L32 16 Q28 24 24 26 Q20 24 16 16 Z" fill="white" opacity="0.9"/>
+              <path d="M16 16 Q12 22 14 30 L16 34" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M32 16 Q36 22 34 30 L32 34" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M16 34 Q20 38 24 38 Q28 38 32 34" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <circle cx="24" cy="16" r="3" fill="#6d28d9"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-white/25 text-white text-xs font-black flex items-center justify-center shrink-0">3</span>
+              <h3 class="text-white font-bold text-sm leading-tight">갑상선절제술</h3>
+            </div>
+            <p class="text-purple-200 text-[11px] mt-0.5">Thyroidectomy</p>
+            <span class="text-[10px] bg-red-500/80 text-white px-2 py-0.5 rounded-full font-semibold mt-1 inline-block">검사비 별도 · 로봇 별도</span>
+          </div>
+        </div>
+        <div class="bg-purple-50 px-5 py-4">
+          <ul class="space-y-1.5">
+            <li class="flex items-center gap-2 text-xs text-purple-800">
+              <span class="w-5 h-5 rounded-full bg-purple-200 text-purple-700 text-[10px] font-bold flex items-center justify-center shrink-0">a</span>
+              <span>반절제술(엽절제술) <span class="text-gray-500">(Lobectomy)</span></span>
+            </li>
+            <li class="flex items-center gap-2 text-xs text-purple-800">
+              <span class="w-5 h-5 rounded-full bg-purple-200 text-purple-700 text-[10px] font-bold flex items-center justify-center shrink-0">b</span>
+              <span>전절제술 <span class="text-gray-500">(Total Thyroidectomy)</span></span>
+            </li>
+          </ul>
+          <!-- 2. Intragastric Balloon -->
+          <div class="mt-3 pt-3 border-t border-purple-100">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-6 h-6 rounded-full text-white text-[10px] font-black flex items-center justify-center shrink-0" style="background:#8b5cf6">2</span>
+              <span class="text-xs font-semibold text-purple-800">위풍선술 <span class="text-gray-500 font-normal">(Intragastric Balloon, End-Ball)</span></span>
+            </div>
+          </div>
+          <button onclick="openWA()" class="btn-primary w-full py-2 text-xs mt-3 rounded-lg" style="background:#6d28d9">
+            <i class="fab fa-whatsapp"></i>
+            <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의하기">Inquire</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4. Breast Disease -->
+      <div class="rounded-2xl overflow-hidden border border-pink-100 shadow-sm">
+        <div class="flex items-center gap-3 px-5 py-4" style="background:linear-gradient(135deg,#be185d,#ec4899)">
+          <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 48 48" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 28 Q8 16 20 14 Q24 13 28 15 Q36 10 40 20 Q44 30 38 38 L10 38 Q6 34 8 28Z" fill="white" opacity="0.85"/>
+              <path d="M24 15 L24 38" stroke="#be185d" stroke-width="1.5" stroke-dasharray="3 2"/>
+              <circle cx="18" cy="26" r="4" fill="#be185d" opacity="0.4"/>
+              <circle cx="30" cy="24" r="4" fill="#be185d" opacity="0.4"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-white/25 text-white text-xs font-black flex items-center justify-center shrink-0">4</span>
+              <h3 class="text-white font-bold text-sm leading-tight">유방질환</h3>
+            </div>
+            <p class="text-pink-200 text-[11px] mt-0.5">Breast Disease</p>
+          </div>
+        </div>
+        <div class="bg-pink-50 px-5 py-4">
+          <ul class="space-y-1.5">
+            <li class="flex items-center gap-2 text-xs text-pink-800">
+              <span class="w-5 h-5 rounded-full bg-pink-200 text-pink-700 text-[10px] font-bold flex items-center justify-center shrink-0">a</span>
+              <span>사전검사 <span class="text-gray-500">(Pre-test)</span></span>
+            </li>
+            <li class="flex items-center gap-2 text-xs text-pink-800">
+              <span class="w-5 h-5 rounded-full bg-pink-200 text-pink-700 text-[10px] font-bold flex items-center justify-center shrink-0">b</span>
+              <span>유방양성종양제거 <span class="text-gray-500">(Benign Tumor Excision)</span></span>
+            </li>
+            <li class="flex items-center gap-2 text-xs text-pink-800">
+              <span class="w-5 h-5 rounded-full bg-pink-200 text-pink-700 text-[10px] font-bold flex items-center justify-center shrink-0">c</span>
+              <span>유방암수술 절제 <span class="text-gray-500">(Radical Mastectomy)</span></span>
+            </li>
+            <li class="flex items-center gap-2 text-xs text-pink-800">
+              <span class="w-5 h-5 rounded-full bg-pink-200 text-pink-700 text-[10px] font-bold flex items-center justify-center shrink-0">d</span>
+              <span>유방암수술 보존절제 <span class="text-gray-500">(Conserving Surgery)</span></span>
+            </li>
+            <li class="flex items-center gap-2 text-xs text-pink-800">
+              <span class="w-5 h-5 rounded-full bg-pink-200 text-pink-700 text-[10px] font-bold flex items-center justify-center shrink-0">e</span>
+              <span>보존절제 + 재건 <span class="text-gray-500">(Lumpectomy + Reconstruction)</span></span>
+            </li>
+            <li class="flex items-center gap-2 text-xs text-pink-800">
+              <span class="w-5 h-5 rounded-full bg-pink-200 text-pink-700 text-[10px] font-bold flex items-center justify-center shrink-0">f</span>
+              <span>함몰유두·부유방·여성형유방 <span class="text-gray-500">(Nipple/Accessory/Gynecomastia)</span></span>
+            </li>
+          </ul>
+          <button onclick="openWA()" class="btn-primary w-full py-2 text-xs mt-3 rounded-lg" style="background:#be185d">
+            <i class="fab fa-whatsapp"></i>
+            <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의하기">Inquire</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 5+6+7+8. Gallbladder / Hernia / Anal / Appendix -->
+      <div class="rounded-2xl overflow-hidden border border-orange-100 shadow-sm">
+        <div class="flex items-center gap-3 px-5 py-4" style="background:linear-gradient(135deg,#b45309,#f59e0b)">
+          <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 48 48" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Gallbladder shape -->
+              <ellipse cx="30" cy="14" rx="8" ry="6" fill="white" opacity="0.9"/>
+              <path d="M26 18 L22 26 Q20 32 24 36 Q28 40 32 36 Q36 32 34 26 L30 18" fill="white" opacity="0.7"/>
+              <path d="M30 20 L30 38" stroke="#b45309" stroke-width="1.5"/>
+              <!-- Liver outline -->
+              <path d="M6 12 Q6 8 14 8 Q22 8 26 14 Q20 12 14 16 Q8 20 8 26 Q6 22 6 12Z" fill="white" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-white font-bold text-sm leading-tight">소화기계 외과수술</h3>
+            <p class="text-amber-100 text-[11px] mt-0.5">GI / General Surgery</p>
+            <span class="text-[10px] bg-red-500/80 text-white px-2 py-0.5 rounded-full font-semibold mt-1 inline-block">검사비 별도</span>
+          </div>
+        </div>
+        <div class="bg-orange-50 px-5 py-4">
+          <div class="space-y-2">
+            <div class="flex items-start gap-2 pb-2 border-b border-orange-100">
+              <span class="w-6 h-6 rounded-full text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5" style="background:#f59e0b">5</span>
+              <div>
+                <p class="text-xs font-semibold text-orange-800">담낭수술 <span class="text-[10px] bg-red-100 text-red-600 px-1.5 rounded font-medium">로봇 별도</span></p>
+                <p class="text-[11px] text-gray-500">Laparoscopic Cholecystectomy</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2 pb-2 border-b border-orange-100">
+              <span class="w-6 h-6 rounded-full text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5" style="background:#f59e0b">6</span>
+              <div>
+                <p class="text-xs font-semibold text-orange-800">탈장수술</p>
+                <p class="text-[11px] text-gray-500">Hernia Repair</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2 pb-2 border-b border-orange-100">
+              <span class="w-6 h-6 rounded-full text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5" style="background:#ea580c">7</span>
+              <div>
+                <p class="text-xs font-semibold text-orange-800">항문수술</p>
+                <p class="text-[11px] text-gray-500">Anal Surgery (Hemorrhoids, Fistulas)</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="w-6 h-6 rounded-full text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5" style="background:#ea580c">8</span>
+              <div>
+                <p class="text-xs font-semibold text-orange-800">맹장수술</p>
+                <p class="text-[11px] text-gray-500">Laparoscopic Appendectomy</p>
+              </div>
+            </div>
+          </div>
+          <button onclick="openWA()" class="btn-primary w-full py-2 text-xs mt-3 rounded-lg" style="background:#b45309">
+            <i class="fab fa-whatsapp"></i>
+            <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의하기">Inquire</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 9. Varicose Veins -->
+      <div class="rounded-2xl overflow-hidden border border-blue-100 shadow-sm">
+        <div class="flex items-center gap-3 px-5 py-4" style="background:linear-gradient(135deg,#1e40af,#3b82f6)">
+          <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 48 48" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Leg outline -->
+              <path d="M16 4 L16 44 Q16 46 18 46 L22 46 Q24 46 24 44 L24 4 Z" fill="white" opacity="0.3"/>
+              <!-- Varicose veins -->
+              <path d="M20 10 Q24 14 20 18 Q16 22 20 26 Q24 30 20 34" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <circle cx="20" cy="18" r="2.5" fill="white" opacity="0.8"/>
+              <circle cx="20" cy="26" r="2" fill="white" opacity="0.8"/>
+              <path d="M26 12 Q30 16 26 20 Q22 24 26 28" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-white/25 text-white text-xs font-black flex items-center justify-center shrink-0">9</span>
+              <h3 class="text-white font-bold text-sm leading-tight">하지정맥류</h3>
+            </div>
+            <p class="text-blue-200 text-[11px] mt-0.5">Varicose Veins (부위별 기준)</p>
+            <span class="text-[10px] bg-red-500/80 text-white px-2 py-0.5 rounded-full font-semibold mt-1 inline-block">검사비 별도</span>
+          </div>
+        </div>
+        <div class="bg-blue-50 px-5 py-4">
+          <ul class="space-y-1.5">
+            <li class="flex items-center gap-2 text-xs text-blue-800">
+              <span class="w-5 h-5 rounded-full bg-blue-200 text-blue-700 text-[10px] font-bold flex items-center justify-center shrink-0">a</span>
+              <span>베나실 <span class="text-gray-500">(Cyanoacrylate Vein Occlusion)</span></span>
+            </li>
+            <li class="flex items-center gap-2 text-xs text-blue-800">
+              <span class="w-5 h-5 rounded-full bg-blue-200 text-blue-700 text-[10px] font-bold flex items-center justify-center shrink-0">b</span>
+              <span>일반수술 <span class="text-gray-500">(Total Stripping)</span></span>
+            </li>
+          </ul>
+          <button onclick="openWA()" class="btn-primary w-full py-2 text-xs mt-3 rounded-lg" style="background:#1e40af">
+            <i class="fab fa-whatsapp"></i>
+            <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의하기">Inquire</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 10+11. Medical Checkup + Polyp Removal -->
+      <div class="rounded-2xl overflow-hidden border border-indigo-100 shadow-sm">
+        <div class="flex items-center gap-3 px-5 py-4" style="background:linear-gradient(135deg,#312e81,#6366f1)">
+          <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 48 48" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Clipboard with checkmark -->
+              <rect x="10" y="8" width="28" height="34" rx="4" fill="white" opacity="0.9"/>
+              <rect x="18" y="4" width="12" height="8" rx="2" fill="#6366f1"/>
+              <line x1="16" y1="20" x2="32" y2="20" stroke="#312e81" stroke-width="2" stroke-linecap="round"/>
+              <line x1="16" y1="27" x2="28" y2="27" stroke="#312e81" stroke-width="2" stroke-linecap="round"/>
+              <path d="M16 34 L19 37 L24 31" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-white/25 text-white text-xs font-black flex items-center justify-center shrink-0">10</span>
+              <h3 class="text-white font-bold text-sm leading-tight">건강검진</h3>
+            </div>
+            <p class="text-indigo-200 text-[11px] mt-0.5">Medical Checkup Packages</p>
+          </div>
+        </div>
+        <div class="bg-indigo-50 px-5 py-4">
+          <div class="grid grid-cols-2 gap-2 mb-3">
+            <div class="bg-white rounded-xl p-2.5 border border-indigo-100 text-center">
+              <div class="text-indigo-700 font-black text-base">2030</div>
+              <div class="text-green-600 font-bold text-xs">₩230,000</div>
+            </div>
+            <div class="bg-white rounded-xl p-2.5 border border-indigo-100 text-center">
+              <div class="text-indigo-700 font-black text-base">4050</div>
+              <div class="text-green-600 font-bold text-xs">₩350,000</div>
+            </div>
+            <div class="bg-white rounded-xl p-2.5 border border-indigo-100 text-center">
+              <div class="text-indigo-700 font-black text-base">6070</div>
+              <div class="text-green-600 font-bold text-xs">₩490,000</div>
+            </div>
+            <div class="bg-white rounded-xl p-2.5 border border-indigo-100 text-center">
+              <div class="text-indigo-700 font-black text-xs">소화기정밀</div>
+              <div class="text-green-600 font-bold text-xs">₩290,000</div>
+            </div>
+            <div class="bg-white rounded-xl p-2.5 border border-indigo-100 text-center">
+              <div class="text-indigo-700 font-black text-xs">여성정밀</div>
+              <div class="text-green-600 font-bold text-xs">₩390,000</div>
+            </div>
+            <div class="bg-white rounded-xl p-2.5 border border-indigo-100 text-center">
+              <div class="text-indigo-700 font-black text-xs">VIP</div>
+              <div class="text-amber-600 font-bold text-xs">₩2,500,000</div>
+            </div>
+          </div>
+          <!-- 11. Polyp removal -->
+          <div class="bg-white rounded-xl p-3 border border-indigo-100">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-6 h-6 rounded-full text-white text-[10px] font-black flex items-center justify-center shrink-0" style="background:#6366f1">11</span>
+              <span class="text-xs font-bold text-indigo-800">건강검진 시 용종 제거</span>
+            </div>
+            <div class="text-[11px] text-gray-600 space-y-1">
+              <div class="flex justify-between"><span>용종제거 1EA</span><span class="font-semibold text-green-700">₩400,000</span></div>
+              <div class="flex justify-between"><span>추가 1EA당</span><span class="font-semibold text-green-700">₩50,000~</span></div>
+            </div>
+          </div>
+          <button onclick="openWA()" class="btn-primary w-full py-2 text-xs mt-3 rounded-lg" style="background:#312e81">
+            <i class="fab fa-whatsapp"></i>
+            <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의하기">Inquire</span>
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+
+    <!-- Robot surgery note -->
+    <div class="mt-6 bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 flex gap-3 items-start">
+      <i class="fas fa-robot text-mb text-lg mt-0.5"></i>
+      <div>
+        <p class="font-semibold text-mb text-sm mb-1" t-en="Robot Surgery Available" t-ja="ロボット手術可能" t-zh="机器人手术可预约" t-ko="로봇 수술 가능">Robot Surgery Available</p>
+        <p class="text-xs text-gray-500" t-en="Robot-assisted surgery for bariatric, thyroid, and gallbladder procedures. Pricing is separate — please inquire via WhatsApp for a personalized quote." t-ja="肥満・甲状腺・胆嚢手術のロボット支援手術が可能です。費用は別途お問い合わせください。" t-zh="可提供肥胖症、甲状腺及胆囊手术的机器人辅助手术。费用另计，请通过WhatsApp询价。" t-ko="비만대사, 갑상선, 담낭 수술에 로봇 수술 가능. 비용은 별도 문의 바랍니다.">Robot-assisted surgery for bariatric, thyroid, and gallbladder procedures. Pricing is separate — please inquire via WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PATIENT REVIEWS ═══════ -->
+<section class="py-14 px-4" style="background:#f0f4ff" id="reviews">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-10 text-center">
+      <p class="section-eyebrow">PATIENT REVIEWS</p>
+      <h2 class="section-h" t-en="What Our Patients Say" t-ja="患者さんの声" t-zh="患者评价" t-ko="환자분들의 후기">What Our Patients Say</h2>
+      <p class="section-sub" t-en="Real experiences from international patients who visited Min Hospital." t-ja="民병院を訪れた外国人患者の実際の体験談です。" t-zh="来自到访民病院的外国患者的真实体验。" t-ko="민병원을 방문한 외국인 환자분들의 실제 경험담입니다.">Real experiences from international patients who visited Min Hospital.</p>
+    </div>
+
+    <!-- Stars summary -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
+      <div class="text-center">
+        <div class="text-5xl font-black text-mb">4.9</div>
+        <div class="flex justify-center gap-0.5 my-1">
+          <i class="fas fa-star text-amber-400 text-sm"></i>
+          <i class="fas fa-star text-amber-400 text-sm"></i>
+          <i class="fas fa-star text-amber-400 text-sm"></i>
+          <i class="fas fa-star text-amber-400 text-sm"></i>
+          <i class="fas fa-star text-amber-400 text-sm"></i>
+        </div>
+        <div class="text-xs text-gray-500" t-en="Average rating" t-ja="平均評価" t-zh="平均评分" t-ko="평균 평점">Average rating</div>
+      </div>
+      <div class="hidden sm:block w-px h-16 bg-gray-200"></div>
+      <div class="grid grid-cols-3 gap-4 text-center">
+        <div><div class="text-2xl font-bold text-mb">98%</div><div class="text-xs text-gray-500 mt-0.5" t-en="Would recommend" t-ja="推薦意向" t-zh="推荐意愿" t-ko="재추천 의향">Would recommend</div></div>
+        <div><div class="text-2xl font-bold text-mb">500+</div><div class="text-xs text-gray-500 mt-0.5" t-en="Foreign patients" t-ja="外国人患者数" t-zh="外国患者数" t-ko="외국인 환자">Foreign patients</div></div>
+        <div><div class="text-2xl font-bold text-mb">17yr</div><div class="text-xs text-gray-500 mt-0.5" t-en="Established" t-ja="開院年数" t-zh="成立年数" t-ko="개원 연수">Established</div></div>
+      </div>
+    </div>
+
+    <!-- Review cards -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      <div class="review-card flex flex-col gap-3">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0" style="background:#0f3172">Y</div>
+          <div>
+            <div class="font-semibold text-sm text-gray-800">Yuki M.</div>
+            <div class="text-xs text-gray-400">🇯🇵 Japan · Bariatric Surgery</div>
+          </div>
+          <div class="ml-auto flex gap-0.5">
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed flex-1">
+          "민병원에서 위소매절제술을 받았습니다. 모든 의료진이 일본어로 친절하게 설명해 주셔서 불안 없이 수술을 마쳤어요. 수술 후 케어도 꼼꼼하게 해주셔서 너무 감사했습니다."
+        </p>
+        <div class="text-[10px] text-gray-400">— Sleeve Gastrectomy · Feb 2025</div>
+      </div>
+
+      <div class="review-card flex flex-col gap-3">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0" style="background:#be185d">L</div>
+          <div>
+            <div class="font-semibold text-sm text-gray-800">Linda C.</div>
+            <div class="text-xs text-gray-400">🇸🇬 Singapore · Health Checkup</div>
+          </div>
+          <div class="ml-auto flex gap-0.5">
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed flex-1">
+          "Came for a Women's Precision checkup. The English-speaking staff made everything so smooth. The doctor personally explained every result and even found something early that needed attention. I'm so grateful!"
+        </p>
+        <div class="text-[10px] text-gray-400">— Women's Precision Checkup · Jan 2025</div>
+      </div>
+
+      <div class="review-card flex flex-col gap-3">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0" style="background:#0d7e6a">W</div>
+          <div>
+            <div class="font-semibold text-sm text-gray-800">Wei H.</div>
+            <div class="text-xs text-gray-400">🇨🇳 China · Thyroid Surgery</div>
+          </div>
+          <div class="ml-auto flex gap-0.5">
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed flex-1">
+          "在民病院做了甲状腺手术，从预约到手术后随访，全程都有中文服务。医生技术精湛，恢复比预期快很多。强烈推荐给有手术需求的外国患者！"
+        </p>
+        <div class="text-[10px] text-gray-400">— Total Thyroidectomy · Mar 2025</div>
+      </div>
+
+      <div class="review-card flex flex-col gap-3">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0" style="background:#6d28d9">A</div>
+          <div>
+            <div class="font-semibold text-sm text-gray-800">Aliya K.</div>
+            <div class="text-xs text-gray-400">🇰🇿 Kazakhstan · Breast Surgery</div>
+          </div>
+          <div class="ml-auto flex gap-0.5">
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star-half-alt text-amber-400 text-xs"></i>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed flex-1">
+          "I was nervous about getting surgery abroad, but the team at Min Hospital was incredibly professional. They took time to answer all my questions in English. The facilities are modern and clean."
+        </p>
+        <div class="text-[10px] text-gray-400">— Benign Tumor Excision · Dec 2024</div>
+      </div>
+
+      <div class="review-card flex flex-col gap-3">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0" style="background:#1e40af">T</div>
+          <div>
+            <div class="font-semibold text-sm text-gray-800">Takeshi N.</div>
+            <div class="text-xs text-gray-400">🇯🇵 Japan · NICE [4050]</div>
+          </div>
+          <div class="ml-auto flex gap-0.5">
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed flex-1">
+          "NICE[4050]コースで健康診断を受けました。日本語スタッフの方が丁寧に対応してくれて、検査から結果説明まで3時間で完了。価格も韓国なのでリーズナブル。また来年も来ます！"
+        </p>
+        <div class="text-[10px] text-gray-400">— NICE [4050] Checkup · Apr 2025</div>
+      </div>
+
+      <div class="review-card flex flex-col gap-3">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0" style="background:#b45309">M</div>
+          <div>
+            <div class="font-semibold text-sm text-gray-800">Maria S.</div>
+            <div class="text-xs text-gray-400">🇵🇭 Philippines · Gallbladder</div>
+          </div>
+          <div class="ml-auto flex gap-0.5">
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+            <i class="fas fa-star text-amber-400 text-xs"></i>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed flex-1">
+          "Had my gallbladder removed at Min Hospital. The laparoscopic procedure was quick, and I was up and walking the next day. The care coordinator guided me through everything — from pre-op to discharge."
+        </p>
+        <div class="text-[10px] text-gray-400">— Cholecystectomy · Nov 2024</div>
+      </div>
+
+    </div>
+
+    <!-- CTA under reviews -->
+    <div class="mt-8 text-center">
+      <button onclick="openWA()" class="btn-wa px-8 py-3.5 text-sm">
+        <i class="fab fa-whatsapp text-lg"></i>
+        <span t-en="Book Your Consultation via WhatsApp" t-ja="WhatsAppで相談予約" t-zh="通过WhatsApp预约咨询" t-ko="WhatsApp으로 상담 예약">Book Your Consultation via WhatsApp</span>
+      </button>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════ CONTACT / MAP ═══════ -->
 <section class="py-12 px-4" style="background:#0f3172" id="contact">
   <div class="max-w-5xl mx-auto">

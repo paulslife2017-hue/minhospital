@@ -551,7 +551,17 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-robot"><i class="fas fa-robot"></i> Robot option</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#e0f2fe"><i class="fas fa-weight-scale text-blue-600"></i></div>
+          <div class="surg-icon-wrap" style="background:#e0f2fe">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="20" cy="17" rx="12" ry="10" fill="#0ea5e9" opacity="0.85"/>
+              <path d="M8 17 Q7 24 10 27 Q14 32 20 31 Q26 32 30 27 Q33 24 32 17" stroke="#0369a1" stroke-width="1.5" fill="none"/>
+              <path d="M17 12 Q15 8 19 7 Q23 6 24 10" stroke="#0369a1" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              <circle cx="20" cy="17" r="3.5" fill="#0369a1"/>
+              <path d="M18.5 17 L20 15.5 L21.5 17 L20 18.5 Z" fill="white"/>
+              <line x1="8" y1="35" x2="32" y2="35" stroke="#0369a1" stroke-width="2" stroke-linecap="round"/>
+              <line x1="20" y1="30" x2="20" y2="35" stroke="#0369a1" stroke-width="1.5"/>
+            </svg>
+          </div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -608,7 +618,15 @@ const HTML = `<!DOCTYPE html>
                  t-ko="위풍선술 (End-Ball)">위풍선술 (End-Ball)</div>
             <div class="surg-subtitle">Intragastric Balloon Insertion</div>
           </div>
-          <div class="surg-icon-wrap" style="background:#fef3c7"><i class="fas fa-circle-dot text-amber-500"></i></div>
+          <div class="surg-icon-wrap" style="background:#fef3c7">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="20" cy="22" rx="13" ry="12" fill="#f59e0b" opacity="0.85"/>
+              <ellipse cx="20" cy="22" rx="8" ry="7" fill="white" opacity="0.4"/>
+              <path d="M20 8 Q22 4 20 2 Q18 4 20 8" stroke="#d97706" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <circle cx="20" cy="22" r="3" fill="#d97706"/>
+              <path d="M14 16 Q20 12 26 16" stroke="#d97706" stroke-width="1" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -640,7 +658,15 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#fce7f3"><i class="fas fa-lungs text-pink-500"></i></div>
+          <div class="surg-icon-wrap" style="background:#fce7f3">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 6 L20 5 L25 6 L27 14 Q23 20 20 22 Q17 20 13 14 Z" fill="#ec4899" opacity="0.85"/>
+              <path d="M13 14 Q10 19 11 25 L13 29" stroke="#be185d" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M27 14 Q30 19 29 25 L27 29" stroke="#be185d" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M13 29 Q16 33 20 33 Q24 33 27 29" stroke="#be185d" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <circle cx="20" cy="13" r="2.5" fill="#be185d"/>
+            </svg>
+          </div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -676,7 +702,14 @@ const HTML = `<!DOCTYPE html>
                  t-ko="유방질환">유방질환</div>
             <div class="surg-subtitle">Breast disease</div>
           </div>
-          <div class="surg-icon-wrap" style="background:#fce7f3"><i class="fas fa-ribbon text-pink-500"></i></div>
+          <div class="surg-icon-wrap" style="background:#fce7f3">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 24 Q6 14 17 12 Q20 11 23 13 Q30 9 34 18 Q37 26 32 33 L8 33 Q4 29 6 24Z" fill="#f472b6" opacity="0.8"/>
+              <line x1="20" y1="13" x2="20" y2="33" stroke="#be185d" stroke-width="1.2" stroke-dasharray="2.5 1.5"/>
+              <circle cx="16" cy="23" r="3" fill="#be185d" opacity="0.35"/>
+              <circle cx="25" cy="21" r="3" fill="#be185d" opacity="0.35"/>
+            </svg>
+          </div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -750,7 +783,15 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#fef9c3"><i class="fas fa-circle-nodes text-yellow-500"></i></div>
+          <div class="surg-icon-wrap" style="background:#fef9c3">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="25" cy="13" rx="8" ry="6" fill="#eab308" opacity="0.85"/>
+              <path d="M21 17 L18 24 Q16 29 19 33 Q23 37 27 33 Q31 29 29 24 L26 17" fill="#fde047" opacity="0.8"/>
+              <path d="M25 19 L25 35" stroke="#ca8a04" stroke-width="1.5"/>
+              <path d="M6 11 Q6 8 12 8 Q18 8 21 13 Q17 11 12 14 Q7 17 7 22 Q6 19 6 11Z" fill="#fde047" opacity="0.6"/>
+              <circle cx="25" cy="13" r="2.5" fill="#ca8a04"/>
+            </svg>
+          </div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -781,7 +822,16 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#dcfce7"><i class="fas fa-person-walking text-green-600"></i></div>
+          <div class="surg-icon-wrap" style="background:#dcfce7">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 8 L14 24 Q14 28 18 30 Q22 32 26 30 Q30 28 30 24 L30 18" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <ellipse cx="22" cy="18" rx="6" ry="4" fill="#16a34a" opacity="0.6"/>
+              <path d="M14 16 L22 14" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="14" cy="8" r="3" fill="#16a34a"/>
+              <path d="M24 30 L26 36" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M20 30 L18 36" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -812,7 +862,14 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#fce7f3"><i class="fas fa-toilet text-pink-400"></i></div>
+          <div class="surg-icon-wrap" style="background:#fce7f3">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 8 L30 8 L30 14 Q30 20 20 22 Q10 20 10 14 Z" fill="#f9a8d4" opacity="0.85"/>
+              <path d="M10 14 Q10 26 14 30 Q17 34 20 34 Q23 34 26 30 Q30 26 30 14" fill="#fbcfe8" opacity="0.7"/>
+              <line x1="20" y1="5" x2="20" y2="8" stroke="#be185d" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M16 18 Q20 20 24 18" stroke="#be185d" stroke-width="1" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -850,7 +907,15 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#e0f2fe"><i class="fas fa-syringe text-blue-500"></i></div>
+          <div class="surg-icon-wrap" style="background:#e0f2fe">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="7" width="24" height="28" rx="4" fill="#bae6fd" opacity="0.85"/>
+              <rect x="15" y="4" width="10" height="7" rx="2" fill="#0284c7"/>
+              <line x1="13" y1="18" x2="27" y2="18" stroke="#0369a1" stroke-width="2" stroke-linecap="round"/>
+              <line x1="13" y1="24" x2="23" y2="24" stroke="#0369a1" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 30 L16 33 L21 27" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -881,7 +946,15 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#ede9fe"><i class="fas fa-heart-pulse text-purple-500"></i></div>
+          <div class="surg-icon-wrap" style="background:#ede9fe">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 3 L13 37 Q13 39 15 39 L18 39 Q20 39 20 37 L20 3 Z" fill="#c4b5fd" opacity="0.3"/>
+              <path d="M16 8 Q20 12 16 17 Q12 22 16 27 Q20 32 16 37" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <circle cx="16" cy="17" r="2.5" fill="#7c3aed" opacity="0.7"/>
+              <circle cx="16" cy="27" r="2" fill="#7c3aed" opacity="0.7"/>
+              <path d="M22 10 Q26 14 22 19 Q18 23 22 27" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+            </svg>
+          </div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -919,7 +992,15 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-onestop"><i class="fas fa-bolt"></i> Same-day</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#dcfce7"><i class="fas fa-microscope text-green-600"></i></div>
+          <div class="surg-icon-wrap" style="background:#dcfce7">
+            <svg viewBox="0 0 40 40" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="9" y="7" width="22" height="27" rx="3.5" fill="#86efac" opacity="0.85"/>
+              <rect x="15" y="4" width="10" height="7" rx="2" fill="#16a34a"/>
+              <line x1="13" y1="17" x2="27" y2="17" stroke="#166534" stroke-width="2" stroke-linecap="round"/>
+              <line x1="13" y1="22" x2="27" y2="22" stroke="#166534" stroke-width="2" stroke-linecap="round"/>
+              <path d="M14 29 L17 32 L22 26" stroke="#166534" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <i class="fas fa-chevron-down surg-toggle open"></i>
         </div>
         <div class="surg-body open">
