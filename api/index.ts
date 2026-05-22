@@ -1030,70 +1030,6 @@ const HTML = `<!DOCTYPE html>
 </section>
 <div class="color-strip"></div>
 
-<!-- ═══════ REVIEWS ═══════ -->
-<section class="py-12 px-4 sec-teal" id="reviews">
-  <div class="max-w-5xl mx-auto">
-    <div class="mb-8">
-      <p class="section-eyebrow" t-en="PATIENT VOICES" t-ja="患者様の声" t-zh="患者心声" t-ko="환자 후기">PATIENT VOICES</p>
-      <h2 class="section-h" t-en="What international patients say" t-ja="海外からの患者様の声" t-zh="国际患者的真实评价" t-ko="외국인 환자들의 실제 후기">What international patients say</h2>
-    </div>
-    <div class="grid sm:grid-cols-3 gap-4 mb-6">
-      <div class="review-card">
-        <div class="flex items-center gap-2.5 mb-3">
-          <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm text-white bg-mb shrink-0">J</div>
-          <div><div class="font-semibold text-sm text-gray-800">James T.</div><div class="text-[10px] text-gray-400 mt-0.5">🇺🇸 USA · NICE [4050]</div></div>
-          <div class="ml-auto text-yellow-400 text-xs">★★★★★</div>
-        </div>
-        <p class="text-xs text-gray-600 leading-relaxed"
-           t-en="I was nervous about getting a colonoscopy in Korea, but the staff helped me in English at every step. The sedation made it painless. Whole process finished in about 3 hours. Highly recommend."
-           t-ja="韓国で大腸カメラを受けることに不安でしたが、スタッフが英語で一つひとつ丁寧にサポートしてくれました。鎮静剤で痛みもなく、全体で約3時間で終わりました。"
-           t-zh="我很担心在韩国做肠镜，但工作人员全程英语协助。镇静麻醉让整个过程无痛，约3小时完成。强烈推荐。"
-           t-ko="한국에서 대장내시경 받는 게 걱정됐지만 직원들이 영어로 단계마다 도와줬습니다. 수면으로 무통증, 약 3시간 만에 완료.">I was nervous about getting a colonoscopy in Korea, but the staff helped me in English at every step. The sedation made it painless. Whole process finished in about 3 hours. Highly recommend.</p>
-      </div>
-      <div class="review-card">
-        <div class="flex items-center gap-2.5 mb-3">
-          <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm text-white shrink-0" style="background:#b91c1c">Y</div>
-          <div><div class="font-semibold text-sm text-gray-800">Yuki M.</div><div class="text-[10px] text-gray-400 mt-0.5">🇯🇵 Japan · NICE [2030]</div></div>
-          <div class="ml-auto text-yellow-400 text-xs">★★★★★</div>
-        </div>
-        <p class="text-xs text-gray-600 leading-relaxed"
-           t-en="Staff explained everything in Japanese. The gastroscopy with sedation was completely comfortable. The price is also very reasonable compared to Japan — about one-third the cost."
-           t-ja="スタッフが日本語で丁寧に説明してくれました。鎮静剤での胃カメラは全く快適でした。日本と比べて約3分の1の費用でとてもリーズナブルです。"
-           t-zh="工作人员用日语详细解释了一切。镇静下的胃镜检查非常舒适。与日本相比，价格约为三分之一，非常实惠。"
-           t-ko="직원들이 일본어로 꼼꼼히 설명해 주셨어요. 수면 위내시경은 완전히 편안했습니다. 일본 대비 약 3분의 1 비용으로 매우 합리적.">Staff explained everything in Japanese. The gastroscopy with sedation was completely comfortable. The price is also very reasonable compared to Japan — about one-third the cost.</p>
-      </div>
-      <div class="review-card">
-        <div class="flex items-center gap-2.5 mb-3">
-          <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm text-white shrink-0" style="background:#b45309">L</div>
-          <div><div class="font-semibold text-sm text-gray-800">Li W.</div><div class="text-[10px] text-gray-400 mt-0.5">🇨🇳 China · Women's Precision</div></div>
-          <div class="ml-auto text-yellow-400 text-xs">★★★★★</div>
-        </div>
-        <p class="text-xs text-gray-600 leading-relaxed"
-           t-en="The thyroid ultrasound and cancer screening were thorough. Chinese-speaking staff made everything smooth. Received a detailed report in Chinese — very professional."
-           t-ja="甲状腺超音波とがん検診が丁寧でした。中国語スタッフのおかげでスムーズでした。中国語の詳細レポートも受け取れました。とてもプロフェッショナルです。"
-           t-zh="甲状腺超声和癌症筛查非常详细。中文工作人员让整个过程顺畅无阻。收到了中文详细报告——非常专业。"
-           t-ko="갑상선 초음파와 암 검진이 꼼꼼했습니다. 중국어 직원 덕분에 순조롭게 진행됐어요. 중국어 상세 결과지도 받았습니다.">The thyroid ultrasound and cancer screening were thorough. Chinese-speaking staff made everything smooth. Received a detailed report in Chinese — very professional.</p>
-      </div>
-    </div>
-    <div class="note-box flex flex-wrap gap-5 items-center justify-center sm:justify-between">
-      <div class="text-center">
-        <div class="text-3xl font-black text-mb">4.9 <span class="text-yellow-400 text-xl">★</span></div>
-        <div class="text-xs text-gray-400 mt-1" t-en="Average Rating" t-ja="平均評価" t-zh="平均评分" t-ko="평균 평점">Average Rating</div>
-      </div>
-      <div class="space-y-1.5 flex-1 min-w-[160px]">
-        <div class="flex items-center gap-2 text-xs text-gray-400"><span class="w-5">5★</span><div class="flex-1 bg-gray-100 rounded h-1.5"><div class="bg-yellow-400 h-1.5 rounded" style="width:88%"></div></div><span>88%</span></div>
-        <div class="flex items-center gap-2 text-xs text-gray-400"><span class="w-5">4★</span><div class="flex-1 bg-gray-100 rounded h-1.5"><div class="bg-yellow-300 h-1.5 rounded" style="width:10%"></div></div><span>10%</span></div>
-        <div class="flex items-center gap-2 text-xs text-gray-400"><span class="w-5">3★</span><div class="flex-1 bg-gray-100 rounded h-1.5"><div class="bg-gray-200 h-1.5 rounded" style="width:2%"></div></div><span>2%</span></div>
-      </div>
-      <div class="text-center">
-        <div class="text-2xl font-black text-mb">500<span class="text-base font-semibold text-gray-400">+</span></div>
-        <div class="text-xs text-gray-400 mt-1" t-en="Foreign patients / year" t-ja="外国人患者/年" t-zh="外国患者/年" t-ko="외국인 환자/년">Foreign patients / year</div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="color-strip"></div>
-
 <!-- ═══════ PACKAGES ═══════ -->
 <section id="packages" class="py-12 px-4 sec-lavender">
   <div class="max-w-5xl mx-auto">
@@ -1322,6 +1258,70 @@ const HTML = `<!DOCTYPE html>
     </div>
 
 
+  </div>
+</section>
+<div class="color-strip"></div>
+
+<!-- ═══════ REVIEWS ═══════ -->
+<section class="py-12 px-4 sec-teal" id="reviews">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-8">
+      <p class="section-eyebrow" t-en="PATIENT VOICES" t-ja="患者様の声" t-zh="患者心声" t-ko="환자 후기">PATIENT VOICES</p>
+      <h2 class="section-h" t-en="What international patients say" t-ja="海外からの患者様の声" t-zh="国际患者的真实评价" t-ko="외국인 환자들의 실제 후기">What international patients say</h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-4 mb-6">
+      <div class="review-card">
+        <div class="flex items-center gap-2.5 mb-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm text-white bg-mb shrink-0">J</div>
+          <div><div class="font-semibold text-sm text-gray-800">James T.</div><div class="text-[10px] text-gray-400 mt-0.5">🇺🇸 USA · NICE [4050]</div></div>
+          <div class="ml-auto text-yellow-400 text-xs">★★★★★</div>
+        </div>
+        <p class="text-xs text-gray-600 leading-relaxed"
+           t-en="I was nervous about getting a colonoscopy in Korea, but the staff helped me in English at every step. The sedation made it painless. Whole process finished in about 3 hours. Highly recommend."
+           t-ja="韓国で大腸カメラを受けることに不安でしたが、スタッフが英語で一つひとつ丁寧にサポートしてくれました。鎮静剤で痛みもなく、全体で約3時間で終わりました。"
+           t-zh="我很担心在韩国做肠镜，但工作人员全程英语协助。镇静麻醉让整个过程无痛，约3小时完成。强烈推荐。"
+           t-ko="한국에서 대장내시경 받는 게 걱정됐지만 직원들이 영어로 단계마다 도와줬습니다. 수면으로 무통증, 약 3시간 만에 완료.">I was nervous about getting a colonoscopy in Korea, but the staff helped me in English at every step. The sedation made it painless. Whole process finished in about 3 hours. Highly recommend.</p>
+      </div>
+      <div class="review-card">
+        <div class="flex items-center gap-2.5 mb-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm text-white shrink-0" style="background:#b91c1c">Y</div>
+          <div><div class="font-semibold text-sm text-gray-800">Yuki M.</div><div class="text-[10px] text-gray-400 mt-0.5">🇯🇵 Japan · NICE [2030]</div></div>
+          <div class="ml-auto text-yellow-400 text-xs">★★★★★</div>
+        </div>
+        <p class="text-xs text-gray-600 leading-relaxed"
+           t-en="Staff explained everything in Japanese. The gastroscopy with sedation was completely comfortable. The price is also very reasonable compared to Japan — about one-third the cost."
+           t-ja="スタッフが日本語で丁寧に説明してくれました。鎮静剤での胃カメラは全く快適でした。日本と比べて約3分の1の費用でとてもリーズナブルです。"
+           t-zh="工作人员用日语详细解释了一切。镇静下的胃镜检查非常舒适。与日本相比，价格约为三分之一，非常实惠。"
+           t-ko="직원들이 일본어로 꼼꼼히 설명해 주셨어요. 수면 위내시경은 완전히 편안했습니다. 일본 대비 약 3분의 1 비용으로 매우 합리적.">Staff explained everything in Japanese. The gastroscopy with sedation was completely comfortable. The price is also very reasonable compared to Japan — about one-third the cost.</p>
+      </div>
+      <div class="review-card">
+        <div class="flex items-center gap-2.5 mb-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm text-white shrink-0" style="background:#b45309">L</div>
+          <div><div class="font-semibold text-sm text-gray-800">Li W.</div><div class="text-[10px] text-gray-400 mt-0.5">🇨🇳 China · Women's Precision</div></div>
+          <div class="ml-auto text-yellow-400 text-xs">★★★★★</div>
+        </div>
+        <p class="text-xs text-gray-600 leading-relaxed"
+           t-en="The thyroid ultrasound and cancer screening were thorough. Chinese-speaking staff made everything smooth. Received a detailed report in Chinese — very professional."
+           t-ja="甲状腺超音波とがん検診が丁寧でした。中国語スタッフのおかげでスムーズでした。中国語の詳細レポートも受け取れました。とてもプロフェッショナルです。"
+           t-zh="甲状腺超声和癌症筛查非常详细。中文工作人员让整个过程顺畅无阻。收到了中文详细报告——非常专业。"
+           t-ko="갑상선 초음파와 암 검진이 꼼꼼했습니다. 중국어 직원 덕분에 순조롭게 진행됐어요. 중국어 상세 결과지도 받았습니다.">The thyroid ultrasound and cancer screening were thorough. Chinese-speaking staff made everything smooth. Received a detailed report in Chinese — very professional.</p>
+      </div>
+    </div>
+    <div class="note-box flex flex-wrap gap-5 items-center justify-center sm:justify-between">
+      <div class="text-center">
+        <div class="text-3xl font-black text-mb">4.9 <span class="text-yellow-400 text-xl">★</span></div>
+        <div class="text-xs text-gray-400 mt-1" t-en="Average Rating" t-ja="平均評価" t-zh="平均评分" t-ko="평균 평점">Average Rating</div>
+      </div>
+      <div class="space-y-1.5 flex-1 min-w-[160px]">
+        <div class="flex items-center gap-2 text-xs text-gray-400"><span class="w-5">5★</span><div class="flex-1 bg-gray-100 rounded h-1.5"><div class="bg-yellow-400 h-1.5 rounded" style="width:88%"></div></div><span>88%</span></div>
+        <div class="flex items-center gap-2 text-xs text-gray-400"><span class="w-5">4★</span><div class="flex-1 bg-gray-100 rounded h-1.5"><div class="bg-yellow-300 h-1.5 rounded" style="width:10%"></div></div><span>10%</span></div>
+        <div class="flex items-center gap-2 text-xs text-gray-400"><span class="w-5">3★</span><div class="flex-1 bg-gray-100 rounded h-1.5"><div class="bg-gray-200 h-1.5 rounded" style="width:2%"></div></div><span>2%</span></div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-black text-mb">500<span class="text-base font-semibold text-gray-400">+</span></div>
+        <div class="text-xs text-gray-400 mt-1" t-en="Foreign patients / year" t-ja="外国人患者/年" t-zh="外国患者/年" t-ko="외국인 환자/년">Foreign patients / year</div>
+      </div>
+    </div>
   </div>
 </section>
 <div class="color-strip"></div>
