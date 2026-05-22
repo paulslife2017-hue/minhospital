@@ -506,6 +506,26 @@ const HTML = `<!DOCTYPE html>
         <p class="text-xs text-amber-700 leading-relaxed" t-en="Gastroscopy and colonoscopy performed while you sleep comfortably — at no extra charge. Monitored by certified anesthesiologists." t-ja="胃カメラ・大腸カメラを安心して眠ったまま受けられます。追加費用なし。専任麻酔科医が管理。" t-zh="胃镜和肠镜检查可舒适入睡进行——无额外费用。由认证麻醉师全程监控。" t-ko="위내시경과 대장내시경을 편안하게 수면 상태로 — 추가 비용 없음. 마취 전문의 모니터링.">Gastroscopy and colonoscopy performed while you sleep comfortably — at no extra charge. Monitored by certified anesthesiologists.</p>
       </div>
     </div>
+
+    <!-- ── 실제로 확인하세요: 민병원 영상 ── -->
+    <div class="mt-8">
+      <p class="text-xs font-bold text-mb uppercase tracking-widest mb-1 text-center"
+         t-en="SEE IT FOR YOURSELF" t-ja="実際にご確認ください" t-zh="亲眼见证" t-ko="직접 확인해보세요">SEE IT FOR YOURSELF</p>
+      <p class="text-[11px] text-gray-400 text-center mb-3"
+         t-en="Korea Surgical No.1 – MIN HOSPITAL" t-ja="韓国外科No.1 – ミン病院" t-zh="韩国外科No.1 – 民病院" t-ko="한국 외과 No.1 – 민병원">Korea Surgical No.1 – MIN HOSPITAL</p>
+      <div class="relative w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100"
+           style="padding-bottom:56.25%">
+        <iframe
+          src="https://www.youtube.com/embed/mY8y3xLEyug?rel=0&modestbranding=1"
+          title="Korea Surgical No.1 – MIN HOSPITAL"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full"
+          style="border:0">
+        </iframe>
+      </div>
+    </div>
+
   </div>
 </section>
 <div class="color-strip"></div>
@@ -1025,28 +1045,6 @@ const HTML = `<!DOCTYPE html>
       </div>
 
     </div><!-- /surg-grid -->
-
-    <!-- ── Min Hospital One-Stop Surgery Video ── -->
-    <div class="mt-10">
-      <p class="text-xs font-bold uppercase tracking-widest mb-3 text-center"
-         style="color:#a8c4ff"
-         t-en="MIN HOSPITAL · ONE-STOP SURGERY VIDEO" t-ja="ミン病院 原点動画" t-zh="民病院 一站式手术视频" t-ko="민병원 원스톱 수술 영상">MIN HOSPITAL · ONE-STOP SURGERY VIDEO</p>
-      <div class="relative w-full rounded-2xl overflow-hidden shadow-xl"
-           style="padding-bottom:56.25%;border:1px solid rgba(255,255,255,.15)">
-        <iframe
-          src="https://www.youtube.com/embed/mY8y3xLEyug?rel=0&modestbranding=1"
-          title="Korea Surgical No.1 – MIN HOSPITAL One-Stop"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          class="absolute inset-0 w-full h-full"
-          style="border:0">
-        </iframe>
-      </div>
-      <p class="text-[11px] text-center mt-2" style="color:#6b8fc4"
-         t-en="Korea Surgical No.1 – MIN HOSPITAL" t-ja="韓国外科No.1 – ミン病院" t-zh="韩国外科No.1 – 民病院" t-ko="한국 외과 No.1 – 민병원">
-        Korea Surgical No.1 – MIN HOSPITAL
-      </p>
-    </div>
 
   </div>
 </section>
