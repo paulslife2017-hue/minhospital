@@ -401,7 +401,6 @@ const HTML = `<!DOCTYPE html>
           <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:#fef3c7"><i class="fas fa-star text-amber-500 text-sm"></i></div>
           <div>
             <p class="font-semibold text-mb text-xs mb-0.5" t-en="Top-Ranked Surgical Hospital" t-ja="外科病院トップランク" t-zh="顶级外科医院" t-ko="외과 전문병원 최상위">Top-Ranked Surgical Hospital</p>
-            <p class="text-[11px] text-gray-500" t-en="Recognized for surgical excellence in Seoul" t-ja="ソウルの外科優秀病院として認定" t-zh="荣获首尔外科卓越医院认可" t-ko="서울 외과 우수 의료기관 인정">Recognized for surgical excellence in Seoul</p>
           </div>
         </div>
         <div class="flex gap-3 items-start">
