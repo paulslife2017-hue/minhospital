@@ -327,7 +327,7 @@ const HTML = `<!DOCTYPE html>
         <div class="text-blue-300 text-[10px] mt-1" t-en="Years" t-ja="年の経験" t-zh="年经验" t-ko="년 경력">Years</div>
       </div>
       <div class="stat-card">
-        <div class="text-white font-black text-xl">11</div>
+        <div class="text-white font-black text-xl">15</div>
         <div class="text-blue-300 text-[10px] mt-1" t-en="Specialists" t-ja="専門医" t-zh="专科医生" t-ko="전문의">Specialists</div>
       </div>
       <div class="stat-card">
@@ -380,7 +380,7 @@ const HTML = `<!DOCTYPE html>
         <div class="text-[10px] text-gray-400" t-en="Based on 300+ reviews" t-ja="300件以上のレビュー" t-zh="300+评价" t-ko="300개+ 리뷰">Based on 300+ reviews</div>
       </div>
       <div class="award-card">
-        <div class="text-3xl font-black text-mb mb-1">11</div>
+        <div class="text-3xl font-black text-mb mb-1">15</div>
         <div class="text-xs font-semibold text-gray-600 mb-1" t-en="Board-certified specialists" t-ja="専門医" t-zh="专科医生" t-ko="전문의">Board-certified specialists</div>
         <div class="text-[10px] text-gray-400" t-en="Across 13 departments" t-ja="13診療科" t-zh="跨13个科室" t-ko="13개 진료과">Across 13 departments</div>
       </div>
@@ -474,7 +474,7 @@ const HTML = `<!DOCTYPE html>
         <div class="why-icon" style="background:#fef3c7"><i class="fas fa-user-md text-amber-600"></i></div>
         <div>
           <h3 class="font-semibold text-mb text-sm mb-1" t-en="Professor-Level Physicians" t-ja="大学教授レベルの医師" t-zh="教授级专科医生" t-ko="대학교수급 전문의">Professor-Level Physicians</h3>
-          <p class="text-xs text-gray-500 leading-relaxed" t-en="11 specialists across 13 departments, trained at Korea's top universities." t-ja="韓国トップ大学出身の専門医11名、13の専門科に配置。" t-zh="11名专科医生分布于13个科室，均毕业于韩国顶尖大学。" t-ko="13개 진료과 11명의 전문의, 모두 국내 최고 대학 출신.">11 specialists across 13 departments, trained at Korea's top universities.</p>
+          <p class="text-xs text-gray-500 leading-relaxed" t-en="15 specialists across 13 departments, trained at Korea's top universities." t-ja="韓国トップ大学出身の専門医15名、13の専門科に配置。" t-zh="15名专科医生分布于13个科室，均毕业于韩国顶尖大学。" t-ko="13개 진료과 15명의 전문의, 모두 국내 최고 대학 출신.">15 specialists across 13 departments, trained at Korea's top universities.</p>
         </div>
       </div>
       <div class="why-card flex gap-3 items-start">
