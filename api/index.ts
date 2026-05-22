@@ -1047,6 +1047,28 @@ const HTML = `<!DOCTYPE html>
 
     </div><!-- /surg-grid -->
 
+    <!-- ── Min Hospital One-Stop Surgery Video ── -->
+    <div class="mt-10">
+      <p class="text-xs font-bold uppercase tracking-widest mb-3 text-center"
+         style="color:#a8c4ff"
+         t-en="MIN HOSPITAL · ONE-STOP SURGERY VIDEO" t-ja="ミン病院 原点動画" t-zh="民病院 一站式手术视频" t-ko="민병원 원스톱 수술 영상">MIN HOSPITAL · ONE-STOP SURGERY VIDEO</p>
+      <div class="relative w-full rounded-2xl overflow-hidden shadow-xl"
+           style="padding-bottom:56.25%;border:1px solid rgba(255,255,255,.15)">
+        <iframe
+          src="https://www.youtube.com/embed/mY8y3xLEyug?rel=0&modestbranding=1"
+          title="Korea Surgical No.1 – MIN HOSPITAL One-Stop"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full"
+          style="border:0">
+        </iframe>
+      </div>
+      <p class="text-[11px] text-center mt-2" style="color:#6b8fc4"
+         t-en="Korea Surgical No.1 – MIN HOSPITAL" t-ja="韓国外科No.1 – ミン病院" t-zh="韩国外科No.1 – 民病院" t-ko="한국 외과 No.1 – 민병원">
+        Korea Surgical No.1 – MIN HOSPITAL
+      </p>
+    </div>
+
   </div>
 </section>
 <div class="color-strip"></div>
