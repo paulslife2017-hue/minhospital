@@ -1282,6 +1282,85 @@ const HTML = `<!DOCTYPE html>
 </section>
 <div class="color-strip"></div>
 
+<!-- ═══════ HOW TO BOOK ═══════ -->
+<section class="py-12 px-4 sec-white" id="book">
+  <div class="max-w-3xl mx-auto">
+    <div class="mb-8">
+      <p class="section-eyebrow" t-en="HOW IT WORKS" t-ja="ご利用の流れ" t-zh="预约流程" t-ko="이용 방법">HOW IT WORKS</p>
+      <h2 class="section-h" t-en="3 steps to your check-up" t-ja="3つのステップで検診完了" t-zh="3步完成体检预约" t-ko="3단계로 검진 완료">3 steps to your check-up</h2>
+    </div>
+    <div class="space-y-3">
+      <div class="step-card">
+        <div class="step-dot text-white shrink-0" style="background:#0f3172">1</div>
+        <div>
+          <h3 class="font-semibold text-mb text-sm mb-1" t-en="Contact us via WhatsApp" t-ja="WhatsAppでお問い合わせ" t-zh="通过WhatsApp联系我们" t-ko="WhatsApp으로 문의하기">Contact us via WhatsApp</h3>
+          <p class="text-sm text-gray-500 leading-relaxed" t-en="Message us in English, Japanese, or Chinese. Tell us your age and interests. We'll guide you to the right package." t-ja="英語・日本語・中国語でメッセージください。年齢とご希望をお伝えください。最適なパッケージをご案内します。" t-zh="用英语、日语或中文发消息给我们。告诉我们您的年龄和需求，我们将推荐适合的套餐。" t-ko="영어, 일본어, 중국어로 메시지 보내주세요. 나이와 관심사를 알려주시면 맞는 패키지를 안내해 드립니다.">Message us in English, Japanese, or Chinese. Tell us your age and interests. We'll guide you to the right package.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-dot text-white shrink-0" style="background:#c9820a">2</div>
+        <div>
+          <h3 class="font-semibold text-mb text-sm mb-1" t-en="Confirm your date" t-ja="日程を確定する" t-zh="确认检查日期" t-ko="날짜 확정">Confirm your date</h3>
+          <p class="text-sm text-gray-500 leading-relaxed" t-en="We'll send a confirmation with prep instructions. Fast from 10 PM the night before (water is fine until 2 hrs before)." t-ja="確認書と準備案内をお送りします。前日夜10時から絶食（2時間前まで水のみOK）。" t-zh="我们会发送确认函和准备说明。从前一天晚上10点开始禁食（检查前2小时可以喝水）。" t-ko="준비 안내와 함께 확인서를 발송합니다. 전날 밤 10시부터 금식 (2시간 전까지 물은 가능).">We'll send a confirmation with prep instructions. Fast from 10 PM the night before (water is fine until 2 hrs before).</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-dot text-white shrink-0" style="background:#065f46">3</div>
+        <div>
+          <h3 class="font-semibold text-mb text-sm mb-1" t-en="Visit &amp; complete your check-up" t-ja="来院・検診完了" t-zh="就诊完成体检" t-ko="방문 후 검진 완료">Visit &amp; complete your check-up</h3>
+          <p class="text-sm text-gray-500 leading-relaxed" t-en="Arrive at Min Hospital (Line 4, Mia Station Exit 5). Complete your 2–4 hour check-up. Receive your full report and personal doctor consultation." t-ja="ミン病院に到着（4号線・美亜駅5番出口）。2〜4時間の検診を受け、詳細なレポートと医師の個別相談をお受けください。" t-zh="到达民病院（4号线美亚站5号出口）。完成2-4小时体检，获取详细报告和医生个人咨询。" t-ko="민병원 방문 (4호선 미아역 5번 출구). 2~4시간 검진 후 상세 보고서와 개인 결과 상담.">Arrive at Min Hospital (Line 4, Mia Station Exit 5). Complete your 2–4 hour check-up. Receive your full report and personal doctor consultation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="amber-box mt-4 flex gap-3 items-start">
+      <span class="text-lg shrink-0">💡</span>
+      <div>
+        <p class="font-semibold text-amber-800 text-sm mb-1" t-en="What to bring" t-ja="持ち物" t-zh="需要携带" t-ko="지참 사항">What to bring</p>
+        <div class="text-xs text-amber-700 space-y-0.5">
+          <div>· <span t-en="Passport or ID" t-ja="パスポートまたはID" t-zh="护照或身份证" t-ko="여권 또는 신분증">Passport or ID</span></div>
+          <div>· <span t-en="Comfortable, loose-fitting clothing" t-ja="ゆったりした服装" t-zh="宽松舒适的衣物" t-ko="편안한 복장">Comfortable, loose-fitting clothing</span></div>
+          <div>· <span t-en="If taking sedation, bring someone to escort you home" t-ja="鎮静剤使用の場合は同伴者が必要" t-zh="如接受镇静，需有人陪同回家" t-ko="수면 내시경 시 귀가 동반자 필요">If taking sedation, bring someone to escort you home</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="color-strip"></div>
+
+<!-- ═══════ COMPARISON TABLE ═══════ -->
+<section class="py-10 px-4 sec-warm">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-6">
+      <p class="section-eyebrow" t-en="COMPARE" t-ja="比較" t-zh="对比" t-ko="비교">COMPARE</p>
+      <h2 class="section-h" t-en="Side-by-side comparison" t-ja="パッケージ比較一覧" t-zh="套餐横向对比" t-ko="패키지 한눈에 비교">Side-by-side comparison</h2>
+    </div>
+    <div class="overflow-x-auto rounded-xl border border-gray-100 shadow-sm">
+      <table class="comp-table w-full" style="min-width:580px">
+        <thead>
+          <tr>
+            <th class="text-left px-4" t-en="Package" t-ja="パッケージ" t-zh="套餐" t-ko="패키지">Package</th>
+            <th t-en="Price" t-ja="価格" t-zh="价格" t-ko="가격">Price</th>
+            <th t-en="CT Scan" t-ja="CT" t-zh="CT" t-ko="CT">CT</th>
+            <th t-en="Ultrasound" t-ja="超音波" t-zh="超声" t-ko="초음파">Ultrasound</th>
+            <th t-en="Tumor Markers" t-ja="腫瘍M" t-zh="肿瘤标志物" t-ko="종양표지자">Tumor</th>
+            <th t-en="Genetics" t-ja="遺伝子" t-zh="基因" t-ko="유전자">DNA</th>
+            <th t-en="Time" t-ja="時間" t-zh="时间" t-ko="시간">Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="text-left px-4 font-semibold text-mb text-sm">NICE [2030]</td><td class="font-semibold text-green-600 text-sm">₩230K</td><td class="text-gray-300 text-xs">—</td><td class="text-green-500 font-semibold text-xs">✓</td><td class="text-gray-300 text-xs">—</td><td class="text-gray-300 text-xs">—</td><td class="text-gray-400 text-xs">2–3h</td></tr>
+          <tr><td class="text-left px-4 font-medium text-mb text-sm" t-en="Digestive Precision" t-ja="消化器精密" t-zh="消化精密" t-ko="소화기정밀">Digestive Precision</td><td class="font-semibold text-green-600 text-sm">₩290K</td><td class="text-gray-300 text-xs">—</td><td class="text-green-500 font-semibold text-xs">✓✓</td><td class="text-green-500 font-semibold text-xs">✓</td><td class="text-gray-300 text-xs">—</td><td class="text-gray-400 text-xs">3–4h</td></tr>
+          <tr><td class="text-left px-4 font-semibold text-mb text-sm">NICE [4050]</td><td class="font-semibold text-green-600 text-sm">₩350K</td><td class="text-green-500 font-semibold text-xs">×2</td><td class="text-green-500 font-semibold text-xs">✓✓</td><td class="text-green-500 font-semibold text-xs">✓</td><td class="text-gray-300 text-xs">—</td><td class="text-gray-400 text-xs">3–4h</td></tr>
+          <tr><td class="text-left px-4 font-medium text-sm" style="color:#7c3aed" t-en="Women's Precision" t-ja="女性精密" t-zh="女性精密" t-ko="여성정밀">Women's Precision</td><td class="font-semibold text-green-600 text-sm">₩390K</td><td class="text-green-500 font-semibold text-xs">×2</td><td class="text-green-500 font-semibold text-xs">✓✓</td><td class="text-green-500 font-semibold text-xs">✓</td><td class="text-gray-300 text-xs">—</td><td class="text-gray-400 text-xs">3–4h</td></tr>
+          <tr><td class="text-left px-4 font-medium text-sm text-green-700" t-en="Brain &amp; Genetics" t-ja="脳・遺伝子" t-zh="脑部及基因" t-ko="뇌·유전자">Brain &amp; Genetics</td><td class="font-semibold text-green-600 text-sm">₩400K</td><td class="text-green-500 font-semibold text-xs">Brain</td><td class="text-green-500 font-semibold text-xs">✓✓</td><td class="text-green-500 font-semibold text-xs">✓</td><td class="text-green-500 font-semibold text-xs">✓✓</td><td class="text-gray-400 text-xs">3–4h</td></tr>
+          <tr style="background:#fffbeb"><td class="text-left px-4 font-bold text-mb text-sm">NICE [6070] ⭐</td><td class="font-bold text-amber-600 text-sm">₩490K</td><td class="text-green-600 font-bold text-xs">×3</td><td class="text-green-600 font-bold text-xs">✓✓✓</td><td class="text-green-600 font-bold text-xs">✓✓</td><td class="text-green-600 font-bold text-xs">✓</td><td class="text-gray-400 text-xs">3–4h</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<div class="color-strip"></div>
+
 <!-- ═══════ REVIEWS ═══════ -->
 <section class="py-12 px-4 sec-teal" id="reviews">
   <div class="max-w-5xl mx-auto">
@@ -1340,85 +1419,6 @@ const HTML = `<!DOCTYPE html>
       <div class="text-center">
         <div class="text-2xl font-black text-mb">500<span class="text-base font-semibold text-gray-400">+</span></div>
         <div class="text-xs text-gray-400 mt-1" t-en="Foreign patients / year" t-ja="外国人患者/年" t-zh="外国患者/年" t-ko="외국인 환자/년">Foreign patients / year</div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="color-strip"></div>
-
-<!-- ═══════ COMPARISON TABLE ═══════ -->
-<section class="py-10 px-4 sec-warm">
-  <div class="max-w-5xl mx-auto">
-    <div class="mb-6">
-      <p class="section-eyebrow" t-en="COMPARE" t-ja="比較" t-zh="对比" t-ko="비교">COMPARE</p>
-      <h2 class="section-h" t-en="Side-by-side comparison" t-ja="パッケージ比較一覧" t-zh="套餐横向对比" t-ko="패키지 한눈에 비교">Side-by-side comparison</h2>
-    </div>
-    <div class="overflow-x-auto rounded-xl border border-gray-100 shadow-sm">
-      <table class="comp-table w-full" style="min-width:580px">
-        <thead>
-          <tr>
-            <th class="text-left px-4" t-en="Package" t-ja="パッケージ" t-zh="套餐" t-ko="패키지">Package</th>
-            <th t-en="Price" t-ja="価格" t-zh="价格" t-ko="가격">Price</th>
-            <th t-en="CT Scan" t-ja="CT" t-zh="CT" t-ko="CT">CT</th>
-            <th t-en="Ultrasound" t-ja="超音波" t-zh="超声" t-ko="초음파">Ultrasound</th>
-            <th t-en="Tumor Markers" t-ja="腫瘍M" t-zh="肿瘤标志物" t-ko="종양표지자">Tumor</th>
-            <th t-en="Genetics" t-ja="遺伝子" t-zh="基因" t-ko="유전자">DNA</th>
-            <th t-en="Time" t-ja="時間" t-zh="时间" t-ko="시간">Time</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="text-left px-4 font-semibold text-mb text-sm">NICE [2030]</td><td class="font-semibold text-green-600 text-sm">₩230K</td><td class="text-gray-300 text-xs">—</td><td class="text-green-500 font-semibold text-xs">✓</td><td class="text-gray-300 text-xs">—</td><td class="text-gray-300 text-xs">—</td><td class="text-gray-400 text-xs">2–3h</td></tr>
-          <tr><td class="text-left px-4 font-medium text-mb text-sm" t-en="Digestive Precision" t-ja="消化器精密" t-zh="消化精密" t-ko="소화기정밀">Digestive Precision</td><td class="font-semibold text-green-600 text-sm">₩290K</td><td class="text-gray-300 text-xs">—</td><td class="text-green-500 font-semibold text-xs">✓✓</td><td class="text-green-500 font-semibold text-xs">✓</td><td class="text-gray-300 text-xs">—</td><td class="text-gray-400 text-xs">3–4h</td></tr>
-          <tr><td class="text-left px-4 font-semibold text-mb text-sm">NICE [4050]</td><td class="font-semibold text-green-600 text-sm">₩350K</td><td class="text-green-500 font-semibold text-xs">×2</td><td class="text-green-500 font-semibold text-xs">✓✓</td><td class="text-green-500 font-semibold text-xs">✓</td><td class="text-gray-300 text-xs">—</td><td class="text-gray-400 text-xs">3–4h</td></tr>
-          <tr><td class="text-left px-4 font-medium text-sm" style="color:#7c3aed" t-en="Women's Precision" t-ja="女性精密" t-zh="女性精密" t-ko="여성정밀">Women's Precision</td><td class="font-semibold text-green-600 text-sm">₩390K</td><td class="text-green-500 font-semibold text-xs">×2</td><td class="text-green-500 font-semibold text-xs">✓✓</td><td class="text-green-500 font-semibold text-xs">✓</td><td class="text-gray-300 text-xs">—</td><td class="text-gray-400 text-xs">3–4h</td></tr>
-          <tr><td class="text-left px-4 font-medium text-sm text-green-700" t-en="Brain &amp; Genetics" t-ja="脳・遺伝子" t-zh="脑部及基因" t-ko="뇌·유전자">Brain &amp; Genetics</td><td class="font-semibold text-green-600 text-sm">₩400K</td><td class="text-green-500 font-semibold text-xs">Brain</td><td class="text-green-500 font-semibold text-xs">✓✓</td><td class="text-green-500 font-semibold text-xs">✓</td><td class="text-green-500 font-semibold text-xs">✓✓</td><td class="text-gray-400 text-xs">3–4h</td></tr>
-          <tr style="background:#fffbeb"><td class="text-left px-4 font-bold text-mb text-sm">NICE [6070] ⭐</td><td class="font-bold text-amber-600 text-sm">₩490K</td><td class="text-green-600 font-bold text-xs">×3</td><td class="text-green-600 font-bold text-xs">✓✓✓</td><td class="text-green-600 font-bold text-xs">✓✓</td><td class="text-green-600 font-bold text-xs">✓</td><td class="text-gray-400 text-xs">3–4h</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<div class="color-strip"></div>
-
-<!-- ═══════ HOW TO BOOK ═══════ -->
-<section class="py-12 px-4 sec-white" id="book">
-  <div class="max-w-3xl mx-auto">
-    <div class="mb-8">
-      <p class="section-eyebrow" t-en="HOW IT WORKS" t-ja="ご利用の流れ" t-zh="预约流程" t-ko="이용 방법">HOW IT WORKS</p>
-      <h2 class="section-h" t-en="3 steps to your check-up" t-ja="3つのステップで検診完了" t-zh="3步完成体检预约" t-ko="3단계로 검진 완료">3 steps to your check-up</h2>
-    </div>
-    <div class="space-y-3">
-      <div class="step-card">
-        <div class="step-dot text-white shrink-0" style="background:#0f3172">1</div>
-        <div>
-          <h3 class="font-semibold text-mb text-sm mb-1" t-en="Contact us via WhatsApp" t-ja="WhatsAppでお問い合わせ" t-zh="通过WhatsApp联系我们" t-ko="WhatsApp으로 문의하기">Contact us via WhatsApp</h3>
-          <p class="text-sm text-gray-500 leading-relaxed" t-en="Message us in English, Japanese, or Chinese. Tell us your age and interests. We'll guide you to the right package." t-ja="英語・日本語・中国語でメッセージください。年齢とご希望をお伝えください。最適なパッケージをご案内します。" t-zh="用英语、日语或中文发消息给我们。告诉我们您的年龄和需求，我们将推荐适合的套餐。" t-ko="영어, 일본어, 중국어로 메시지 보내주세요. 나이와 관심사를 알려주시면 맞는 패키지를 안내해 드립니다.">Message us in English, Japanese, or Chinese. Tell us your age and interests. We'll guide you to the right package.</p>
-        </div>
-      </div>
-      <div class="step-card">
-        <div class="step-dot text-white shrink-0" style="background:#c9820a">2</div>
-        <div>
-          <h3 class="font-semibold text-mb text-sm mb-1" t-en="Confirm your date" t-ja="日程を確定する" t-zh="确认检查日期" t-ko="날짜 확정">Confirm your date</h3>
-          <p class="text-sm text-gray-500 leading-relaxed" t-en="We'll send a confirmation with prep instructions. Fast from 10 PM the night before (water is fine until 2 hrs before)." t-ja="確認書と準備案内をお送りします。前日夜10時から絶食（2時間前まで水のみOK）。" t-zh="我们会发送确认函和准备说明。从前一天晚上10点开始禁食（检查前2小时可以喝水）。" t-ko="준비 안내와 함께 확인서를 발송합니다. 전날 밤 10시부터 금식 (2시간 전까지 물은 가능).">We'll send a confirmation with prep instructions. Fast from 10 PM the night before (water is fine until 2 hrs before).</p>
-        </div>
-      </div>
-      <div class="step-card">
-        <div class="step-dot text-white shrink-0" style="background:#065f46">3</div>
-        <div>
-          <h3 class="font-semibold text-mb text-sm mb-1" t-en="Visit &amp; complete your check-up" t-ja="来院・検診完了" t-zh="就诊完成体检" t-ko="방문 후 검진 완료">Visit &amp; complete your check-up</h3>
-          <p class="text-sm text-gray-500 leading-relaxed" t-en="Arrive at Min Hospital (Line 4, Mia Station Exit 5). Complete your 2–4 hour check-up. Receive your full report and personal doctor consultation." t-ja="ミン病院に到着（4号線・美亜駅5番出口）。2〜4時間の検診を受け、詳細なレポートと医師の個別相談をお受けください。" t-zh="到达民病院（4号线美亚站5号出口）。完成2-4小时体检，获取详细报告和医生个人咨询。" t-ko="민병원 방문 (4호선 미아역 5번 출구). 2~4시간 검진 후 상세 보고서와 개인 결과 상담.">Arrive at Min Hospital (Line 4, Mia Station Exit 5). Complete your 2–4 hour check-up. Receive your full report and personal doctor consultation.</p>
-        </div>
-      </div>
-    </div>
-    <div class="amber-box mt-4 flex gap-3 items-start">
-      <span class="text-lg shrink-0">💡</span>
-      <div>
-        <p class="font-semibold text-amber-800 text-sm mb-1" t-en="What to bring" t-ja="持ち物" t-zh="需要携带" t-ko="지참 사항">What to bring</p>
-        <div class="text-xs text-amber-700 space-y-0.5">
-          <div>· <span t-en="Passport or ID" t-ja="パスポートまたはID" t-zh="护照或身份证" t-ko="여권 또는 신분증">Passport or ID</span></div>
-          <div>· <span t-en="Comfortable, loose-fitting clothing" t-ja="ゆったりした服装" t-zh="宽松舒适的衣物" t-ko="편안한 복장">Comfortable, loose-fitting clothing</span></div>
-          <div>· <span t-en="If taking sedation, bring someone to escort you home" t-ja="鎮静剤使用の場合は同伴者が必要" t-zh="如接受镇静，需有人陪同回家" t-ko="수면 내시경 시 귀가 동반자 필요">If taking sedation, bring someone to escort you home</span></div>
-        </div>
       </div>
     </div>
   </div>
