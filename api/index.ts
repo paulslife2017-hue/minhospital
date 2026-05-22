@@ -236,7 +236,7 @@ const HTML = `<!DOCTYPE html>
     .surg-title-wrap{flex:1;min-width:0}
     .surg-title{font-weight:700;font-size:14px;color:#0a2460;line-height:1.3}
     .surg-subtitle{font-size:11px;color:#6b82a8;margin-top:2px}
-    .surg-icon-wrap{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px}
+    .surg-icon-wrap{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
     .surg-toggle{font-size:11px;color:#9db0cc;transition:transform .25s;flex-shrink:0}
     .surg-toggle.open{transform:rotate(180deg)}
     .surg-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
@@ -551,7 +551,7 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-robot"><i class="fas fa-robot"></i> Robot option</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#e0f2fe">🫃</div>
+          <div class="surg-icon-wrap" style="background:#e0f2fe"><i class="fas fa-weight-scale text-blue-600"></i></div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -608,7 +608,7 @@ const HTML = `<!DOCTYPE html>
                  t-ko="위풍선술 (End-Ball)">위풍선술 (End-Ball)</div>
             <div class="surg-subtitle">Intragastric Balloon Insertion</div>
           </div>
-          <div class="surg-icon-wrap" style="background:#fef3c7">🎈</div>
+          <div class="surg-icon-wrap" style="background:#fef3c7"><i class="fas fa-circle-dot text-amber-500"></i></div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -640,7 +640,7 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#fce7f3">🦋</div>
+          <div class="surg-icon-wrap" style="background:#fce7f3"><i class="fas fa-lungs text-pink-500"></i></div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -676,7 +676,7 @@ const HTML = `<!DOCTYPE html>
                  t-ko="유방질환">유방질환</div>
             <div class="surg-subtitle">Breast disease</div>
           </div>
-          <div class="surg-icon-wrap" style="background:#fce7f3">🎗️</div>
+          <div class="surg-icon-wrap" style="background:#fce7f3"><i class="fas fa-ribbon text-pink-500"></i></div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -750,7 +750,7 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#fef9c3">🟡</div>
+          <div class="surg-icon-wrap" style="background:#fef9c3"><i class="fas fa-circle-nodes text-yellow-500"></i></div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -781,7 +781,7 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#dcfce7">🩺</div>
+          <div class="surg-icon-wrap" style="background:#dcfce7"><i class="fas fa-person-walking text-green-600"></i></div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -812,7 +812,7 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#fce7f3">🔬</div>
+          <div class="surg-icon-wrap" style="background:#fce7f3"><i class="fas fa-toilet text-pink-400"></i></div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -850,7 +850,7 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#e0f2fe">🏥</div>
+          <div class="surg-icon-wrap" style="background:#e0f2fe"><i class="fas fa-syringe text-blue-500"></i></div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -881,7 +881,7 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#ede9fe">🦵</div>
+          <div class="surg-icon-wrap" style="background:#ede9fe"><i class="fas fa-heart-pulse text-purple-500"></i></div>
           <i class="fas fa-chevron-down surg-toggle"></i>
         </div>
         <div class="surg-body">
@@ -919,7 +919,7 @@ const HTML = `<!DOCTYPE html>
               <span class="surg-badge badge-onestop"><i class="fas fa-bolt"></i> Same-day</span>
             </div>
           </div>
-          <div class="surg-icon-wrap" style="background:#dcfce7">🩻</div>
+          <div class="surg-icon-wrap" style="background:#dcfce7"><i class="fas fa-microscope text-green-600"></i></div>
           <i class="fas fa-chevron-down surg-toggle open"></i>
         </div>
         <div class="surg-body open">
