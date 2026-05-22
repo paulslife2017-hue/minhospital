@@ -549,7 +549,7 @@ const HTML = `<!DOCTYPE html>
          t-en="Min Hospital is a government-certified surgical hospital. If a health check-up reveals a condition requiring treatment, our surgical team can proceed immediately — no referrals, no waiting."
          t-ja="ミン病院は政府認定の外科専門病院です。健康診断で異常が見つかった場合、そのまま専門外科チームが対応します。紹介状不要・待ち時間なし。"
          t-zh="民病院是政府认证的外科专科医院。如体检发现异常，我们的外科团队可立即处理——无需转诊，无需等待。"
-         t-ko="민병원은 정부 인증 외과 전문병원입니다. 건강검진에서 이상 소견 발견 시 별도 병원 이동 없이 당일 수술까지 진행 가능합니다.">
+         t-ko="민병원은 대한민국 대표 외과 병원을 지향합니다. 건강검진에서 이상 소견 발견 시 별도 병원 이동 없이 당일 수술까지 진행 가능합니다.">
         Min Hospital is a government-certified surgical hospital. If a health check-up reveals a condition requiring treatment, our surgical team can proceed immediately — no referrals, no waiting.
       </p>
     </div>
