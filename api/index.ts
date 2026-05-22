@@ -226,6 +226,34 @@ const HTML = `<!DOCTYPE html>
 
     /* ── GRADIENT DIVIDER ── */
     .color-strip{height:4px;background:linear-gradient(90deg,#0f3172,#1d52b0,#4a8aff,#25d366,#c9820a)}
+
+    /* ── SURGERY SECTION ── */
+    .surg-grid{display:grid;gap:12px}
+    .surg-cat{background:#fff;border-radius:18px;border:1px solid #dde5f5;overflow:hidden;box-shadow:0 2px 12px rgba(15,49,114,.07);transition:box-shadow .2s}
+    .surg-cat:hover{box-shadow:0 8px 28px rgba(15,49,114,.12)}
+    .surg-header{display:flex;align-items:center;gap:12px;padding:16px 18px;cursor:pointer;user-select:none}
+    .surg-num{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;color:#fff;flex-shrink:0;background:linear-gradient(135deg,#1648a8,#0f3172)}
+    .surg-title-wrap{flex:1;min-width:0}
+    .surg-title{font-weight:700;font-size:14px;color:#0a2460;line-height:1.3}
+    .surg-subtitle{font-size:11px;color:#6b82a8;margin-top:2px}
+    .surg-icon-wrap{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px}
+    .surg-toggle{font-size:11px;color:#9db0cc;transition:transform .25s;flex-shrink:0}
+    .surg-toggle.open{transform:rotate(180deg)}
+    .surg-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+    .surg-body.open{max-height:600px}
+    .surg-items{padding:0 18px 16px}
+    .surg-item{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-top:1px solid #f0f4fc}
+    .surg-item:first-child{border-top:none}
+    .surg-dot{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#e8f0ff,#d0e0ff);color:#1648a8;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+    .surg-item-text{flex:1;min-width:0}
+    .surg-item-ko{font-size:12px;font-weight:600;color:#1e2a45;line-height:1.35}
+    .surg-item-en{font-size:10.5px;color:#7a8ea8;margin-top:1px;line-height:1.4}
+    .surg-badge{display:inline-flex;align-items:center;gap:4px;font-size:9.5px;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:6px;vertical-align:middle}
+    .badge-robot{background:#fef3c7;color:#92400e}
+    .badge-scope{background:#e0f2fe;color:#0369a1}
+    .badge-onestop{background:#dcfce7;color:#166534}
+    .surg-cta-bar{background:linear-gradient(135deg,#f0f6ff,#e8f0ff);border-top:1px solid #dde8ff;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .surg-cta-txt{font-size:11px;color:#4a6490}
   </style>
 </head>
 
@@ -248,6 +276,10 @@ const HTML = `<!DOCTYPE html>
         <button class="lang-btn" onclick="setLang('zh')" data-l="zh">中文</button>
         <button class="lang-btn" onclick="setLang('ko')" data-l="ko">한국어</button>
       </div>
+      <a href="#surgery" class="btn-primary text-xs px-4 py-2 hide-sm">
+        <i class="fas fa-scalpel text-[10px]"></i>
+        <span t-en="Surgery Info" t-ja="手術案内" t-zh="手术信息" t-ko="수술 안내">Surgery Info</span>
+      </a>
       <button onclick="openQuiz()" class="btn-gold text-xs px-4 py-2 hide-sm">
         <i class="fas fa-clipboard-list text-[10px]"></i>
         <span t-en="Find My Package" t-ja="最適を探す" t-zh="找适合我的" t-ko="내게 맞는 검진">Find My Package</span>
@@ -414,6 +446,518 @@ const HTML = `<!DOCTYPE html>
            t-ko="갑상선 초음파, 종양표지자 혈액 검사(AFP·CEA·CA19-9·PSA·CA125), CT 정밀 암 검진 프로그램. 갑상선 결절·간암·위암 조기 발견.">
           Comprehensive thyroid ultrasound, tumor marker blood panels (AFP, CEA, CA19-9, PSA, CA125), and CT-based cancer screening programs. Early detection of thyroid nodules, liver cancer, gastric cancer, and more.
         </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="color-strip"></div>
+
+<!-- ═══════ SURGERY SECTION ═══════ -->
+<section id="surgery" class="py-12 px-4 sec-blue-deep">
+  <div class="max-w-5xl mx-auto">
+
+    <!-- Heading -->
+    <div class="mb-8 text-center">
+      <p class="section-eyebrow" style="background:rgba(255,255,255,.12);color:#a8c4ff;border-color:rgba(255,255,255,.2)"
+         t-en="CHECKUP → SURGERY" t-ja="検診から手術まで" t-zh="检诊到手术" t-ko="검진 후 수술까지">CHECKUP → SURGERY</p>
+      <h2 class="font-extrabold text-white mb-3" style="font-size:clamp(1.25rem,4vw,1.85rem);line-height:1.25"
+          t-en="From diagnosis to surgery — all at Min Hospital"
+          t-ja="診断から手術まで — ミン病院で完結"
+          t-zh="从诊断到手术——一站式民病院"
+          t-ko="검진 결과 이상 발견 시 바로 수술까지 — 민병원 원스톱">
+        From diagnosis to surgery — all at Min Hospital
+      </h2>
+      <p class="text-blue-300 text-sm max-w-2xl mx-auto leading-relaxed"
+         t-en="Min Hospital is a government-certified surgical hospital. If a health check-up reveals a condition requiring treatment, our surgical team can proceed immediately — no referrals, no waiting."
+         t-ja="ミン病院は政府認定の外科専門病院です。健康診断で異常が見つかった場合、そのまま専門外科チームが対応します。紹介状不要・待ち時間なし。"
+         t-zh="民病院是政府认证的外科专科医院。如体检发现异常，我们的外科团队可立即处理——无需转诊，无需等待。"
+         t-ko="민병원은 정부 인증 외과 전문병원입니다. 건강검진에서 이상 소견 발견 시 별도 병원 이동 없이 당일 수술까지 진행 가능합니다.">
+        Min Hospital is a government-certified surgical hospital. If a health check-up reveals a condition requiring treatment, our surgical team can proceed immediately — no referrals, no waiting.
+      </p>
+    </div>
+
+    <!-- One-stop badge row -->
+    <div class="flex flex-wrap gap-3 justify-center mb-8">
+      <div class="flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-xs font-semibold text-white backdrop-filter backdrop-blur-sm">
+        <i class="fas fa-check-circle text-green-400"></i>
+        <span t-en="Same-day biopsy &amp; treatment" t-ja="当日生検・治療" t-zh="当天活检与治疗" t-ko="당일 조직검사·치료">Same-day biopsy &amp; treatment</span>
+      </div>
+      <div class="flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-xs font-semibold text-white backdrop-filter backdrop-blur-sm">
+        <i class="fas fa-robot text-amber-300"></i>
+        <span t-en="Robotic surgery available" t-ja="ロボット手術対応" t-zh="机器人手术可选" t-ko="로봇 수술 가능">Robotic surgery available</span>
+      </div>
+      <div class="flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-xs font-semibold text-white backdrop-filter backdrop-blur-sm">
+        <i class="fas fa-language text-blue-300"></i>
+        <span t-en="EN · JA · ZH support" t-ja="英・日・中語対応" t-zh="英日中文支持" t-ko="4개 국어 지원">EN · JA · ZH support</span>
+      </div>
+      <div class="flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-xs font-semibold text-white backdrop-filter backdrop-blur-sm">
+        <i class="fas fa-user-md text-purple-300"></i>
+        <span t-en="Professor-level surgeons" t-ja="大学教授レベルの外科医" t-zh="教授级外科医生" t-ko="대학교수급 외과 전문의">Professor-level surgeons</span>
+      </div>
+    </div>
+
+    <!-- Surgery categories grid -->
+    <div class="surg-grid sm:grid-cols-2" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr))">
+
+      <!-- 1. 당뇨비만대사수술 -->
+      <div class="surg-cat">
+        <div class="surg-header" onclick="toggleSurg(this)">
+          <div class="surg-num">1</div>
+          <div class="surg-title-wrap">
+            <div class="surg-title"
+                 t-en="Bariatric &amp; Metabolic Surgery"
+                 t-ja="糖尿病・肥満代謝手術"
+                 t-zh="糖尿病肥胖代谢手术"
+                 t-ko="당뇨비만대사수술">당뇨비만대사수술</div>
+            <div class="surg-subtitle">Bariatric Surgery
+              <span class="surg-badge badge-robot"><i class="fas fa-robot"></i> Robot option</span>
+            </div>
+          </div>
+          <div class="surg-icon-wrap" style="background:#e0f2fe">🫃</div>
+          <i class="fas fa-chevron-down surg-toggle"></i>
+        </div>
+        <div class="surg-body">
+          <div class="surg-items">
+            <div class="surg-item">
+              <div class="surg-dot">a</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Laparoscopic Sleeve Gastrectomy" t-ja="腹腔鏡下スリーブ状胃切除術" t-zh="腹腔镜袖状胃切除术" t-ko="위소매절제술">위소매절제술</div>
+                <div class="surg-item-en">Laparoscopic Sleeve Gastrectomy</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">b</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Laparoscopic Roux-en-Y Gastric Bypass" t-ja="腹腔鏡下ルーワイ胃バイパス術" t-zh="腹腔镜Roux-en-Y胃旁路术" t-ko="루와이 위 우회술">루와이 위 우회술</div>
+                <div class="surg-item-en">Laparoscopic Roux-en-Y Gastric Bypass</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">c</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Duodenal-Jejunal Bypass with Sleeve Gastrectomy" t-ja="十二指腸空腸バイパス術" t-zh="十二指肠-空肠旁路+袖状胃" t-ko="십이지장우회술">십이지장우회술</div>
+                <div class="surg-item-en">Laparoscopic Duodenal-Jejunal Bypass with Sleeve Gastrectomy</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">d</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Proximal Jejunal Bypass with Sleeve Gastrectomy" t-ja="近位空腸バイパス術" t-zh="近端空肠旁路+袖状胃" t-ko="근위부공장우회술">근위부공장우회술</div>
+                <div class="surg-item-en">Laparoscopic Proximal Jejunal Bypass with Sleeve Gastrectomy</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">e</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Gastric-ileojejunal Single Anastomosis Bypass" t-ja="胃・回腸空腸単一吻合バイパス" t-zh="胃-回空肠单吻合旁路" t-ko="위소매-공장우회술">위소매-공장우회술</div>
+                <div class="surg-item-en">Gastric-ileojejunal single anastomosis bypass after sleeve gastrectomy</div>
+              </div>
+            </div>
+          </div>
+          <div class="surg-cta-bar">
+            <span class="surg-cta-txt" t-en="Robotic surgery available upon request" t-ja="ロボット手術は別途ご相談" t-zh="机器人手术需另行咨询" t-ko="로봇 수술은 별도 문의">🤖 <span t-en="Robotic surgery available upon request" t-ja="ロボット手術は別途ご相談" t-zh="机器人手术需另行咨询" t-ko="로봇 수술은 별도 문의">Robotic surgery available upon request</span></span>
+            <button onclick="openWA()" class="btn-wa text-xs px-4 py-2"><i class="fab fa-whatsapp"></i> <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의">Inquire</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 위풍선술 -->
+      <div class="surg-cat">
+        <div class="surg-header" onclick="toggleSurg(this)">
+          <div class="surg-num">2</div>
+          <div class="surg-title-wrap">
+            <div class="surg-title"
+                 t-en="Intragastric Balloon Insertion"
+                 t-ja="胃内バルーン挿入術"
+                 t-zh="胃内球囊置入术"
+                 t-ko="위풍선술 (End-Ball)">위풍선술 (End-Ball)</div>
+            <div class="surg-subtitle">Intragastric Balloon Insertion</div>
+          </div>
+          <div class="surg-icon-wrap" style="background:#fef3c7">🎈</div>
+          <i class="fas fa-chevron-down surg-toggle"></i>
+        </div>
+        <div class="surg-body">
+          <div class="surg-items">
+            <div class="surg-item">
+              <div class="surg-dot"><i class="fas fa-info text-[8px]"></i></div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Non-surgical weight loss procedure via endoscope" t-ja="内視鏡を用いた非手術的減量処置" t-zh="内镜非手术减重治疗" t-ko="내시경을 통한 비수술적 비만 치료">내시경을 통한 비수술적 비만 치료</div>
+                <div class="surg-item-en">Balloon inserted endoscopically to reduce stomach capacity — no incisions required</div>
+              </div>
+            </div>
+          </div>
+          <div class="surg-cta-bar">
+            <span class="surg-cta-txt" t-en="Suitable after checkup confirms candidacy" t-ja="検診で適応確認後に実施" t-zh="体检确认适应症后进行" t-ko="검진 후 적응증 확인 시 바로 시술 가능">✅ <span t-en="Suitable after checkup confirms candidacy" t-ja="検診で適応確認後に実施" t-zh="体检确认适应症后进行" t-ko="검진 후 적응증 확인 시 바로 시술 가능">Suitable after checkup confirms candidacy</span></span>
+            <button onclick="openWA()" class="btn-wa text-xs px-4 py-2"><i class="fab fa-whatsapp"></i> <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의">Inquire</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. 갑상선절제술 -->
+      <div class="surg-cat">
+        <div class="surg-header" onclick="toggleSurg(this)">
+          <div class="surg-num">3</div>
+          <div class="surg-title-wrap">
+            <div class="surg-title"
+                 t-en="Thyroidectomy"
+                 t-ja="甲状腺切除術"
+                 t-zh="甲状腺切除术"
+                 t-ko="갑상선절제술">갑상선절제술</div>
+            <div class="surg-subtitle">Thyroidectomy
+              <span class="surg-badge badge-robot"><i class="fas fa-robot"></i> Robot option</span>
+              <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
+            </div>
+          </div>
+          <div class="surg-icon-wrap" style="background:#fce7f3">🦋</div>
+          <i class="fas fa-chevron-down surg-toggle"></i>
+        </div>
+        <div class="surg-body">
+          <div class="surg-items">
+            <div class="surg-item">
+              <div class="surg-dot">a</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Thyroid Lobectomy (Hemi-thyroidectomy)" t-ja="甲状腺葉切除術（半切除）" t-zh="甲状腺腺叶切除术" t-ko="반절제술 (엽절제술)">반절제술 (엽절제술)</div>
+                <div class="surg-item-en">Thyroid Lobectomy</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">b</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Total Thyroidectomy" t-ja="甲状腺全摘術" t-zh="甲状腺全切除术" t-ko="전절제술">전절제술</div>
+                <div class="surg-item-en">Total Thyroidectomy</div>
+              </div>
+            </div>
+          </div>
+          <div class="surg-cta-bar">
+            <span class="surg-cta-txt" t-en="Thyroid ultrasound included in checkup → surgery if needed" t-ja="検診の甲状腺超音波で異常発見→手術" t-zh="体检甲状腺超声发现异常→手术" t-ko="검진 갑상선 초음파 이상 발견 → 바로 수술 연계">🦋 <span t-en="Thyroid ultrasound → surgery if needed" t-ja="超音波で異常→手術へ" t-zh="超声发现异常→手术" t-ko="초음파 이상 → 수술 연계">Thyroid ultrasound → surgery if needed</span></span>
+            <button onclick="openWA()" class="btn-wa text-xs px-4 py-2"><i class="fab fa-whatsapp"></i> <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의">Inquire</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. 유방질환 -->
+      <div class="surg-cat">
+        <div class="surg-header" onclick="toggleSurg(this)">
+          <div class="surg-num">4</div>
+          <div class="surg-title-wrap">
+            <div class="surg-title"
+                 t-en="Breast Disease Surgery"
+                 t-ja="乳房疾患手術"
+                 t-zh="乳房疾病手术"
+                 t-ko="유방질환">유방질환</div>
+            <div class="surg-subtitle">Breast disease</div>
+          </div>
+          <div class="surg-icon-wrap" style="background:#fce7f3">🎗️</div>
+          <i class="fas fa-chevron-down surg-toggle"></i>
+        </div>
+        <div class="surg-body">
+          <div class="surg-items">
+            <div class="surg-item">
+              <div class="surg-dot">a</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Pre-test (Breast evaluation)" t-ja="事前検査（乳房評価）" t-zh="术前检查（乳房评估）" t-ko="사전검사">사전검사 (Pre-test)</div>
+                <div class="surg-item-en">Breast evaluation before surgery</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">b</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Excision of Benign Breast Tumor" t-ja="乳房良性腫瘍摘出術" t-zh="乳房良性肿瘤切除术" t-ko="유방양성종양절제">유방양성종양절제</div>
+                <div class="surg-item-en">Excision of Benign Breast Tumor</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">c</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Modified Radical Mastectomy with Lymph Node Dissection" t-ja="乳房全切除術＋リンパ節郭清" t-zh="改良根治性乳房切除+淋巴清扫" t-ko="유방암수술 전절제">유방암수술 전절제</div>
+                <div class="surg-item-en">Modified radical mastectomy with lymph node dissection</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">d</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Breast-Conserving Surgery + Reconstruction" t-ja="乳房温存手術＋再建" t-zh="保乳手术+乳房重建" t-ko="유방암 보존절제 및 재건">유방암 보존절제 및 재건</div>
+                <div class="surg-item-en">Lumpectomy breast conserving surgery with lymph node dissection + Breast reconstruction</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">e</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Nipple Reconstruction" t-ja="乳頭再建術" t-zh="乳头重建术" t-ko="함몰유두 (Nipple reconstruction)">함몰유두</div>
+                <div class="surg-item-en">Nipple reconstruction</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">f</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Excision of Accessory Breast" t-ja="副乳切除術" t-zh="副乳切除术" t-ko="부유방 절제">부유방 (Excision of Accessory Breast)</div>
+                <div class="surg-item-en">Excision of Accessory Breast</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">g</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Gynecomastia (Subcutaneous Mastectomy)" t-ja="女性化乳房症（皮下乳腺切除術）" t-zh="男性乳腺发育（皮下乳腺切除）" t-ko="여성형유방 (Gynecomastia)">여성형유방</div>
+                <div class="surg-item-en">Subcutaneous mastectomy</div>
+              </div>
+            </div>
+          </div>
+          <div class="surg-cta-bar">
+            <span class="surg-cta-txt" t-en="Breast ultrasound &amp; mammography in checkup → surgery if needed" t-ja="検診の乳房超音波・マンモで異常→手術" t-zh="体检乳房超声/钼靶发现异常→手术" t-ko="검진 유방 초음파·유방X선 이상 → 수술 연계">🎗️ <span t-en="Breast imaging → surgery if needed" t-ja="乳房検査→手術へ" t-zh="乳房检查→手术" t-ko="유방검진 이상 → 수술 연계">Breast imaging → surgery if needed</span></span>
+            <button onclick="openWA()" class="btn-wa text-xs px-4 py-2"><i class="fab fa-whatsapp"></i> <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의">Inquire</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. 담낭수술 -->
+      <div class="surg-cat">
+        <div class="surg-header" onclick="toggleSurg(this)">
+          <div class="surg-num">5</div>
+          <div class="surg-title-wrap">
+            <div class="surg-title"
+                 t-en="Laparoscopic Cholecystectomy (Gallbladder)"
+                 t-ja="腹腔鏡下胆嚢摘出術"
+                 t-zh="腹腔镜胆囊切除术"
+                 t-ko="담낭수술">담낭수술</div>
+            <div class="surg-subtitle">Laparoscopic cholecystectomy
+              <span class="surg-badge badge-robot"><i class="fas fa-robot"></i> Robot option</span>
+              <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
+            </div>
+          </div>
+          <div class="surg-icon-wrap" style="background:#fef9c3">🟡</div>
+          <i class="fas fa-chevron-down surg-toggle"></i>
+        </div>
+        <div class="surg-body">
+          <div class="surg-items">
+            <div class="surg-item">
+              <div class="surg-dot"><i class="fas fa-info text-[8px]"></i></div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Laparoscopic gallbladder removal" t-ja="腹腔鏡による胆嚢摘出（最小侵襲）" t-zh="腹腔镜微创胆囊切除" t-ko="복강경 담낭 절제 (최소침습)">복강경 담낭 절제 (최소침습)</div>
+                <div class="surg-item-en">Minimally invasive laparoscopic removal of gallbladder. Robotic option available on request.</div>
+              </div>
+            </div>
+          </div>
+          <div class="surg-cta-bar">
+            <span class="surg-cta-txt" t-en="Abdominal ultrasound in checkup → surgery if gallstones found" t-ja="腹部超音波で胆石発見→担嚢手術" t-zh="腹部超声发现胆石→手术" t-ko="복부 초음파 담석 발견 → 담낭 수술 연계">🟡 <span t-en="Abdominal ultrasound → surgery if needed" t-ja="腹部超音波→手術へ" t-zh="腹部超声→手术" t-ko="복부 초음파 이상 → 수술 연계">Abdominal ultrasound → surgery if needed</span></span>
+            <button onclick="openWA()" class="btn-wa text-xs px-4 py-2"><i class="fab fa-whatsapp"></i> <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의">Inquire</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. 탈장수술 -->
+      <div class="surg-cat">
+        <div class="surg-header" onclick="toggleSurg(this)">
+          <div class="surg-num">6</div>
+          <div class="surg-title-wrap">
+            <div class="surg-title"
+                 t-en="Hernia Repair Surgery"
+                 t-ja="ヘルニア修復術"
+                 t-zh="疝气修复手术"
+                 t-ko="탈장수술">탈장수술</div>
+            <div class="surg-subtitle">Hernia
+              <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
+            </div>
+          </div>
+          <div class="surg-icon-wrap" style="background:#dcfce7">🩺</div>
+          <i class="fas fa-chevron-down surg-toggle"></i>
+        </div>
+        <div class="surg-body">
+          <div class="surg-items">
+            <div class="surg-item">
+              <div class="surg-dot"><i class="fas fa-info text-[8px]"></i></div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Laparoscopic hernia repair" t-ja="腹腔鏡下ヘルニア修復術" t-zh="腹腔镜疝气修复" t-ko="복강경 탈장 수술">복강경 탈장 수술</div>
+                <div class="surg-item-en">Minimally invasive repair for inguinal, umbilical, and incisional hernias</div>
+              </div>
+            </div>
+          </div>
+          <div class="surg-cta-bar">
+            <span class="surg-cta-txt" t-en="Diagnosed during checkup → immediate surgery possible" t-ja="検診で診断→即手術可能" t-zh="体检诊断→可立即手术" t-ko="검진 진단 후 즉시 수술 연계 가능">✅ <span t-en="Diagnosed → immediate surgery possible" t-ja="診断→即手術" t-zh="诊断→立即手术" t-ko="검진 후 즉시 수술 가능">Diagnosed → immediate surgery possible</span></span>
+            <button onclick="openWA()" class="btn-wa text-xs px-4 py-2"><i class="fab fa-whatsapp"></i> <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의">Inquire</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. 항문수술 -->
+      <div class="surg-cat">
+        <div class="surg-header" onclick="toggleSurg(this)">
+          <div class="surg-num">7</div>
+          <div class="surg-title-wrap">
+            <div class="surg-title"
+                 t-en="Anal Surgery"
+                 t-ja="肛門手術"
+                 t-zh="肛门手术"
+                 t-ko="항문수술">항문수술</div>
+            <div class="surg-subtitle">Anal surgery · Hemorrhoids · Anal fistulas
+              <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
+            </div>
+          </div>
+          <div class="surg-icon-wrap" style="background:#fce7f3">🔬</div>
+          <i class="fas fa-chevron-down surg-toggle"></i>
+        </div>
+        <div class="surg-body">
+          <div class="surg-items">
+            <div class="surg-item">
+              <div class="surg-dot"><i class="fas fa-check text-[8px]"></i></div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Hemorrhoid Surgery" t-ja="痔核手術" t-zh="痔疮手术" t-ko="치질 수술 (Hemorrhoids)">치질 수술 (Hemorrhoids)</div>
+                <div class="surg-item-en">Surgical treatment for internal and external hemorrhoids</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot"><i class="fas fa-check text-[8px]"></i></div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Anal Fistula Surgery" t-ja="痔瘻手術" t-zh="肛瘘手术" t-ko="치루 수술 (Anal fistulas)">치루 수술 (Anal fistulas)</div>
+                <div class="surg-item-en">Surgical repair of anal fistula tracts</div>
+              </div>
+            </div>
+          </div>
+          <div class="surg-cta-bar">
+            <span class="surg-cta-txt" t-en="Colonoscopy reveals hemorrhoids → surgery possible" t-ja="大腸カメラで痔核発見→手術可能" t-zh="肠镜发现痔疮→可手术" t-ko="대장내시경 치질 발견 → 수술 연계 가능">🔬 <span t-en="Colonoscopy → surgery if needed" t-ja="大腸カメラ→手術へ" t-zh="肠镜→手术" t-ko="대장내시경 이상 → 수술 연계">Colonoscopy → surgery if needed</span></span>
+            <button onclick="openWA()" class="btn-wa text-xs px-4 py-2"><i class="fab fa-whatsapp"></i> <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의">Inquire</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. 맹장수술 -->
+      <div class="surg-cat">
+        <div class="surg-header" onclick="toggleSurg(this)">
+          <div class="surg-num">8</div>
+          <div class="surg-title-wrap">
+            <div class="surg-title"
+                 t-en="Laparoscopic Appendectomy"
+                 t-ja="腹腔鏡下虫垂切除術"
+                 t-zh="腹腔镜阑尾切除术"
+                 t-ko="맹장수술">맹장수술</div>
+            <div class="surg-subtitle">Laparoscopic appendectomy
+              <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
+            </div>
+          </div>
+          <div class="surg-icon-wrap" style="background:#e0f2fe">🏥</div>
+          <i class="fas fa-chevron-down surg-toggle"></i>
+        </div>
+        <div class="surg-body">
+          <div class="surg-items">
+            <div class="surg-item">
+              <div class="surg-dot"><i class="fas fa-info text-[8px]"></i></div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Minimally invasive appendix removal" t-ja="最小侵襲による虫垂切除術" t-zh="微创阑尾切除" t-ko="복강경 맹장 절제술 (최소침습)">복강경 맹장 절제술 (최소침습)</div>
+                <div class="surg-item-en">Laparoscopic removal of appendix — small incisions, fast recovery</div>
+              </div>
+            </div>
+          </div>
+          <div class="surg-cta-bar">
+            <span class="surg-cta-txt" t-en="CT scan in checkup → appendicitis detected → surgery" t-ja="検診CT→虫垂炎発見→手術" t-zh="体检CT发现阑尾炎→手术" t-ko="검진 CT 이상 소견 → 수술 연계">🏥 <span t-en="CT → appendicitis detected → surgery" t-ja="CT→虫垂炎→手術" t-zh="CT→阑尾炎→手术" t-ko="CT 이상 → 수술 연계">CT scan → appendicitis → surgery</span></span>
+            <button onclick="openWA()" class="btn-wa text-xs px-4 py-2"><i class="fab fa-whatsapp"></i> <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의">Inquire</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. 하지정맥류 -->
+      <div class="surg-cat">
+        <div class="surg-header" onclick="toggleSurg(this)">
+          <div class="surg-num">9</div>
+          <div class="surg-title-wrap">
+            <div class="surg-title"
+                 t-en="Varicose Vein Surgery"
+                 t-ja="下肢静脈瘤手術"
+                 t-zh="下肢静脉曲张手术"
+                 t-ko="하지정맥류">하지정맥류</div>
+            <div class="surg-subtitle">Varicose veins
+              <span class="surg-badge badge-scope"><i class="fas fa-microscope"></i> Checkup required</span>
+            </div>
+          </div>
+          <div class="surg-icon-wrap" style="background:#ede9fe">🦵</div>
+          <i class="fas fa-chevron-down surg-toggle"></i>
+        </div>
+        <div class="surg-body">
+          <div class="surg-items">
+            <div class="surg-item">
+              <div class="surg-dot">a</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Cyanoacrylate Vein Closure (VenaSeal™)" t-ja="シアノアクリレート静脈閉塞術" t-zh="氰基丙烯酸酯静脉封堵术" t-ko="비나스 (Saphenous vein occlusion)">비나스 (사이아노아크릴레이트 정맥 폐쇄술)</div>
+                <div class="surg-item-en">Saphenous vein occlusion with cyanoacrylate — no heat, no needles</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">b</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Total Stripping of Saphenous Vein" t-ja="大伏在静脈全剥脱術" t-zh="大隐静脉全剥脱术" t-ko="일반수술 (Total Stripping)">일반수술 (Total Stripping)</div>
+                <div class="surg-item-en">Total Stripping of saphenous vein — standard surgical removal</div>
+              </div>
+            </div>
+          </div>
+          <div class="surg-cta-bar">
+            <span class="surg-cta-txt" t-en="Vascular ultrasound in checkup → surgery if needed" t-ja="検診の血管超音波→静脈瘤手術" t-zh="体检血管超声→静脉曲张手术" t-ko="검진 혈관 초음파 이상 → 수술 연계">🦵 <span t-en="Vascular ultrasound → surgery if needed" t-ja="血管超音波→手術へ" t-zh="血管超声→手术" t-ko="혈관 초음파 이상 → 수술 연계">Vascular ultrasound → surgery if needed</span></span>
+            <button onclick="openWA()" class="btn-wa text-xs px-4 py-2"><i class="fab fa-whatsapp"></i> <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의">Inquire</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. 건강검진 중 용종 제거 -->
+      <div class="surg-cat" style="grid-column:1/-1">
+        <div class="surg-header" onclick="toggleSurg(this)">
+          <div class="surg-num" style="background:linear-gradient(135deg,#22c55e,#16a34a)">✚</div>
+          <div class="surg-title-wrap">
+            <div class="surg-title"
+                 t-en="Polyp Removal During Checkup (Same-day)"
+                 t-ja="検診中のポリープ切除（当日）"
+                 t-zh="体检中同日息肉摘除"
+                 t-ko="건강검진 시 용종 제거 (당일)">건강검진 시 용종 제거 (당일)</div>
+            <div class="surg-subtitle">Removal of polyps during Medical checkup
+              <span class="surg-badge badge-onestop"><i class="fas fa-bolt"></i> Same-day</span>
+            </div>
+          </div>
+          <div class="surg-icon-wrap" style="background:#dcfce7">🩻</div>
+          <i class="fas fa-chevron-down surg-toggle open"></i>
+        </div>
+        <div class="surg-body open">
+          <div class="surg-items">
+            <div class="surg-item">
+              <div class="surg-dot">a</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Polyp Removal (1 polyp)" t-ja="ポリープ切除（1個）" t-zh="息肉摘除（1枚）" t-ko="용종제거 1개 (Removal of polyps 1EA)">용종제거 1개</div>
+                <div class="surg-item-en">Removal of polyps 1EA — performed during gastroscopy or colonoscopy</div>
+              </div>
+            </div>
+            <div class="surg-item">
+              <div class="surg-dot">b</div>
+              <div class="surg-item-text">
+                <div class="surg-item-ko" t-en="Additional Polyp Removal (per polyp)" t-ja="追加ポリープ切除（1個追加ごと）" t-zh="追加息肉摘除（每增加1枚）" t-ko="용종제거 추가 1개씩 (Per additional one)">용종제거 추가 (1개당 추가)</div>
+                <div class="surg-item-en">Per additional polyp removed during same endoscopy session</div>
+              </div>
+            </div>
+          </div>
+          <div class="surg-cta-bar" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-color:#bbf7d0">
+            <span class="surg-cta-txt text-green-700 font-semibold" t-en="⚡ Found during gastroscopy or colonoscopy → removed immediately in the same session" t-ja="⚡ 胃・大腸カメラでポリープ発見→その場で切除" t-zh="⚡ 胃镜/肠镜发现息肉→当场立即摘除" t-ko="⚡ 위·대장내시경 중 용종 발견 → 그 자리에서 즉시 제거">
+              <span t-en="⚡ Found during endoscopy → removed immediately" t-ja="⚡ 内視鏡で発見→即切除" t-zh="⚡ 内镜发现→立即摘除" t-ko="⚡ 내시경 중 발견 → 즉시 제거">⚡ Found during endoscopy → removed immediately</span>
+            </span>
+            <button onclick="openWA()" class="btn-wa text-xs px-4 py-2"><i class="fab fa-whatsapp"></i> <span t-en="Inquire" t-ja="問い合わせ" t-zh="咨询" t-ko="문의">Inquire</span></button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /surg-grid -->
+
+    <!-- Bottom CTA -->
+    <div class="mt-8 text-center">
+      <p class="text-blue-300 text-sm mb-4"
+         t-en="Not sure if surgery is needed? Start with a health check-up — our doctors will advise you."
+         t-ja="手術が必要か分からない場合は、まず健康診断を受けてください。医師が直接アドバイスします。"
+         t-zh="不确定是否需要手术？先做健康体检——我们的医生会直接给您建议。"
+         t-ko="수술이 필요한지 모르겠다면? 먼저 건강검진을 받으세요. 전문의가 직접 안내해 드립니다.">
+        Not sure if surgery is needed? Start with a health check-up — our doctors will advise you.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <button onclick="openWA()" class="btn-wa px-7 py-3.5 text-sm">
+          <i class="fab fa-whatsapp text-lg"></i>
+          <span t-en="Ask about surgery options" t-ja="手術についてWhatsAppで相談" t-zh="WhatsApp咨询手术方案" t-ko="수술 상담 WhatsApp으로">Ask about surgery options</span>
+        </button>
+        <a href="#packages" class="btn-ghost px-7 py-3.5 text-sm">
+          <i class="fas fa-clipboard-list"></i>
+          <span t-en="View checkup packages first" t-ja="まず検診パッケージを見る" t-zh="先查看体检套餐" t-ko="검진 패키지 먼저 보기">View checkup packages first</span>
+        </a>
       </div>
     </div>
 
@@ -1172,6 +1716,16 @@ const HTML = `<!DOCTYPE html>
       document.getElementById('resultConvert').textContent = p.convert;
       document.getElementById('resultNote').textContent = p.note[lang] || p.note.en;
     }, 180);
+  }
+
+  /* ── SURGERY ACCORDION ── */
+  function toggleSurg(header) {
+    const cat = header.closest('.surg-cat');
+    const body = cat.querySelector('.surg-body');
+    const toggle = header.querySelector('.surg-toggle');
+    const isOpen = body.classList.contains('open');
+    body.classList.toggle('open', !isOpen);
+    toggle.classList.toggle('open', !isOpen);
   }
 
   /* ── SMOOTH SCROLL ── */
