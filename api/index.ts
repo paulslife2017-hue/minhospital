@@ -398,9 +398,10 @@ const HTML = `<!DOCTYPE html>
           </div>
         </div>
         <div class="flex gap-3 items-start">
-          <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:#fef3c7"><i class="fas fa-star text-amber-500 text-sm"></i></div>
+          <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:#fef3c7"><i class="fas fa-robot text-amber-500 text-sm"></i></div>
           <div>
-            <p class="font-semibold text-mb text-xs mb-0.5" t-en="Top-Ranked Surgical Hospital" t-ja="外科病院トップランク" t-zh="顶级外科医院" t-ko="외과 전문병원 최상위">Top-Ranked Surgical Hospital</p>
+            <p class="font-semibold text-mb text-xs mb-0.5" t-en="da Vinci SP Robotic Surgery" t-ja="ダヴィンチSPロボット手術" t-zh="达芬奇SP机器人手术" t-ko="다빈치SP 로봇 수술 도입">da Vinci SP Robotic Surgery</p>
+            <p class="text-[11px] text-gray-500" t-en="Equipped with the da Vinci SP robotic surgical system for minimally invasive precision surgery." t-ja="低侵襲精密手術のためのダヴィンチSPロボット手術システムを導入しています。" t-zh="配备达芬奇SP机器人手术系统，实现微创精准手术。" t-ko="최소침습 정밀 수술을 위한 다빈치SP 로봇수술 시스템이 비치되어 있습니다.">Equipped with the da Vinci SP robotic surgical system for minimally invasive precision surgery.</p>
           </div>
         </div>
         <div class="flex gap-3 items-start">
