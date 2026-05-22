@@ -444,6 +444,27 @@ const HTML = `<!DOCTYPE html>
       </div>
     </div>
 
+    <!-- ── Hospital Introduction Video ── -->
+    <div class="mt-8">
+      <p class="text-xs font-bold text-mb uppercase tracking-widest mb-3 text-center"
+         t-en="HOSPITAL INTRODUCTION VIDEO" t-ja="病院紹介動画" t-zh="医院介绍视频" t-ko="병원 소개 영상">HOSPITAL INTRODUCTION VIDEO</p>
+      <div class="relative w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100"
+           style="padding-bottom:56.25%">
+        <iframe
+          src="https://www.youtube.com/embed/Kx2lJ3Bzij8?rel=0&modestbranding=1"
+          title="Min Hospital – International Patient Health Check Center"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full"
+          style="border:0">
+        </iframe>
+      </div>
+      <p class="text-[11px] text-gray-400 text-center mt-2"
+         t-en="Min Hospital Health Check Center – Medical Korea" t-ja="ミン病院健診センター – Medical Korea" t-zh="民病院健康检查中心 – Medical Korea" t-ko="민병원 건강검진센터 – 메디컬 코리아">
+        Min Hospital Health Check Center – Medical Korea
+      </p>
+    </div>
+
   </div>
 </section>
 <div class="color-strip"></div>
